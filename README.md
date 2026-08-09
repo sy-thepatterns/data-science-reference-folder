@@ -32,5 +32,3 @@ Hardware execution <br>
 Applications <br>
 
 Made by love from a data scientist whose search history is "big O of x algorithm" 1000 times over. 
-
-`(Note: My little locally hosted A.I. was used to standardise the writing across markdowns such that it is easier to read, and search through. Local so that it doesn't use too much power unlike conventional LLMs hehe.)`
