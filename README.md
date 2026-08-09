@@ -31,3 +31,6 @@ Hardware execution
         ↓
 Applications
 
+Made by love from a data scientist whose search history is "big O of x algorithm" 1000 times over. 
+
+`(Note: A.I. was used to standardise the writing across markdowns such that it is easier to read, and search.)`

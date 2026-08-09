@@ -10,6 +10,10 @@ tags:
 
 # Regression MOC
 
+## Task
+
+- [[Regression]]
+
 ## Foundations
 
 - [[Random Variable]]
@@ -30,6 +34,10 @@ tags:
 - [[Elastic Net]]
 - [[Huber Regression]]
 - [[Bayesian Linear Regression]]
+
+## Related Classification Model
+
+- [[Logistic Regression]] belongs to [[Classification]], despite its name.
 
 ## Tree-Based Models
 
@@ -56,3 +64,5 @@ tags:
 
 - [[Linear Regression Computational Pipeline]]
 - [[Linear Regression Implementation Comparison]]
+
+

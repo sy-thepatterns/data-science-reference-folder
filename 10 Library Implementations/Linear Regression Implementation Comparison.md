@@ -16,18 +16,18 @@ tags:
 
 # Linear Regression Implementation Comparison
 
-| Property | scikit-learn | statsmodels | NumPy | SciPy | PyTorch | TensorFlow |
-|---|---|---|---|---|---|---|
-| Primary role | ML estimator | Statistical model and inference | Direct array solve | Direct scientific least-squares solve | Differentiable model training | Differentiable model training |
-| Default fitting style | Direct dense or iterative sparse solve | Least-squares model fit | Direct dense solve | Direct dense solve with driver control | Usually iterative gradient optimization | Usually iterative gradient optimization |
-| Intercept | Managed by estimator | Usually added explicitly | User constructs it | User constructs it | Bias parameter in layer | Bias parameter in layer |
-| Statistical inference | Limited | Extensive | None | None | Not automatic | Not automatic |
-| Pipelines | Strong sklearn integration | Formula/data-model ecosystem | Manual | Manual | Neural-module ecosystem | Keras/TensorFlow ecosystem |
-| Sparse input | Supported through sparse route | Model-dependent | Dense `linalg` interface | Separate sparse solvers available | Sparse support is operation-specific | Sparse support is operation-specific |
-| GPU | Not the standard route | No standard GPU estimator route | Depends on NumPy environment; normally CPU | Normally CPU | Yes | Yes |
-| Rank diagnostics | Dense attributes | Available through results/model internals | Returns rank and singular values | Returns rank and singular values | Not automatic | Not automatic |
-| Solver control | Limited by estimator route | Fit-method dependent | `rcond` | LAPACK driver and `cond` | Optimizer chosen by user | Optimizer chosen by user |
-| Best use | Predictive tabular ML | Inference and diagnostics | Minimal direct matrix solve | Controlled dense least squares | Embedded differentiable systems | TensorFlow/Keras systems |
+| Property              | scikit-learn                           | statsmodels                               | NumPy                                      | SciPy                                  | PyTorch                                 | TensorFlow                              |
+| --------------------- | -------------------------------------- | ----------------------------------------- | ------------------------------------------ | -------------------------------------- | --------------------------------------- | --------------------------------------- |
+| Primary role          | ML estimator                           | Statistical model and inference           | Direct array solve                         | Direct scientific least-squares solve  | Differentiable model training           | Differentiable model training           |
+| Default fitting style | Direct dense or iterative sparse solve | Least-squares model fit                   | Direct dense solve                         | Direct dense solve with driver control | Usually iterative gradient optimization | Usually iterative gradient optimization |
+| Intercept             | Managed by estimator                   | Usually added explicitly                  | User constructs it                         | User constructs it                     | Bias parameter in layer                 | Bias parameter in layer                 |
+| Statistical inference | Limited                                | Extensive                                 | None                                       | None                                   | Not automatic                           | Not automatic                           |
+| Pipelines             | Strong sklearn integration             | Formula/data-model ecosystem              | Manual                                     | Manual                                 | Neural-module ecosystem                 | Keras/TensorFlow ecosystem              |
+| Sparse input          | Supported through sparse route         | Model-dependent                           | Dense `linalg` interface                   | Separate sparse solvers available      | Sparse support is operation-specific    | Sparse support is operation-specific    |
+| GPU                   | Not the standard route                 | No standard GPU estimator route           | Depends on NumPy environment; normally CPU | Normally CPU                           | Yes                                     | Yes                                     |
+| Rank diagnostics      | Dense attributes                       | Available through results/model internals | Returns rank and singular values           | Returns rank and singular values       | Not automatic                           | Not automatic                           |
+| Solver control        | Limited by estimator route             | Fit-method dependent                      | `rcond`                                    | LAPACK driver and `cond`               | Optimizer chosen by user                | Optimizer chosen by user                |
+| Best use              | Predictive tabular ML                  | Inference and diagnostics                 | Minimal direct matrix solve                | Controlled dense least squares         | Embedded differentiable systems         | TensorFlow/Keras systems                |
 
 ## Decision Guide
 
