@@ -32,3 +32,9 @@ Hardware execution <br>
 Applications <br>
 
 Made by love from a data scientist whose search history is "big O of x algorithm" 1000 times over. 
+
+## Copyright and permitted use
+
+Copyright © 2026 sy-thepatterns. All rights reserved. No copying,
+redistribution, derivative use, or AI/ML training is permitted without
+prior written permission. See [LICENSE](LICENSE).
