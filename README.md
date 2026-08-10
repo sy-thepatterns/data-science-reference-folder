@@ -5,6 +5,8 @@ tags:
   - machine-learning
   - knowledge-management
 ---
+website is here! https://sy-thepatterns.com/library
+
 # Machine Learning & Deep Learning Reference
 
 This vault is a connected technical reference for tracing machine learning and deep learning methods through the complete computational stack:
