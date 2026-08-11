@@ -17,12 +17,6 @@ tags:
 
 A native scale-aware estimator for [[Huber Regression]], whose defining objective is a linear predictor fitted with Huber residual loss.
 
-## Support Level
-
-**Native scale-aware estimator.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -134,4 +128,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official scikit-learn documentation for the named API or building blocks.
 - [[Huber Regression]]
 - [[Huber Regression Implementation Comparison]]
-

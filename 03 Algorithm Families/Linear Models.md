@@ -1,6 +1,8 @@
 ---
 type: algorithm-family
 name: Linear Models
+parent_family: []
+tasks: []
 members:
   - "[[Linear Regression]]"
   - "[[Ridge Regression]]"
@@ -9,98 +11,76 @@ members:
   - "[[Logistic Regression]]"
   - "[[Bayesian Linear Regression]]"
   - "[[Huber Regression]]"
-status: reviewed
+related:
+  - "[[Kernel Methods]]"
+  - "[[Probabilistic Models]]"
+  - "[[Bayesian Methods]]"
+status: complete
 tags:
-  - linear
-  - parametric
-  - interpretable
+  - linear-models
 ---
 
 # Linear Models
 
 ## Definition
 
-Linear models use a predictor that is linear in its unknown coefficients. For feature map:
-
-$$
-\phi(x)\in\mathbb{R}^{p}
-$$
-
-the linear score is:
-
-$$
-\eta(x)
-=
-\beta_0+\phi(x)^T\beta
-$$
-
-The features may include polynomials, interactions, splines, or other transformations. The family is linear because coefficients enter linearly, not because the raw input-to-output relationship must be a straight line.
+Use predictors linear in unknown coefficients, even when features are nonlinear transformations of raw inputs.
 
 ## Unifying Principle
 
-Members share a linear predictor but differ in at least one of the following:
-
-- Target type.
-- Observation model or link function.
-- Residual or likelihood objective.
-- Coefficient penalty.
-- Frequentist or Bayesian treatment of parameters.
-- Numerical procedure used for fitting.
-
-These distinctions prevent the family, mathematical objective, solver, software implementation, backend, and hardware from being collapsed into one concept.
+Members share the modelling structure below but may use different objectives, estimators, numerical solvers, implementations, and hardware. Those layers must be documented separately.
 
 ## Shared Mathematical Structure
 
-For a design matrix:
+With feature map $$\phi(x)$$, the score is $$\eta(x)=\beta_0+\phi(x)^T\beta$$; members differ in link, likelihood, loss, penalty, and parameter treatment.
 
-$$
-X\in\mathbb{R}^{n\times p}
-$$
+## Typical Tasks
 
-the vector of linear scores is:
-
-$$
-\eta
-=
-\beta_0\mathbf{1}+X\beta
-$$
-
-A regression model may use the score directly as a conditional mean. A generalized linear model transforms it through an inverse link. A regularized model adds a coefficient penalty. A Bayesian model places a prior over coefficients and computes a posterior.
+Members may address [[Classification]], [[Regression]], [[Representation Learning]], [[Generative Modelling]], or structured decision tasks. Applicability depends on the individual member and objective.
 
 ## Members
 
-| Algorithm | Task | Distinguishing feature |
-|---|---|---|
-| [[Linear Regression]] | [[Regression]] | Squared-residual estimation of a linear conditional mean |
-| [[Ridge Regression]] | [[Regression]] | Squared coefficient penalty |
-| [[Lasso Regression]] | [[Regression]] | Absolute-value coefficient penalty and sparse solutions |
-| [[Elastic Net]] | [[Regression]] | Combined absolute and squared penalties |
-| [[Huber Regression]] | [[Regression]] | Robust residual loss with bounded score |
-| [[Logistic Regression]] | [[Classification]] | Logistic link and Bernoulli likelihood |
-| [[Bayesian Linear Regression]] | [[Regression]] | Prior and posterior distributions over parameters |
+- [[Linear Regression]]
+- [[Ridge Regression]]
+- [[Lasso Regression]]
+- [[Elastic Net]]
+- [[Logistic Regression]]
+- [[Bayesian Linear Regression]]
+- [[Huber Regression]]
+
+## Family Tree
+
+```text
+Linear Models
+├── Linear Regression
+├── Ridge Regression
+└── Huber Regression
+```
 
 ## Shared Strengths
 
-- Efficient prediction based on dot products.
-- Coefficients can often be interpreted conditionally.
-- Many fitting objectives are convex.
-- Feature transformations allow substantial flexibility.
-- Mature theory and implementations.
+Fast prediction, mature theory, many convex fitting problems, and conditional interpretability.
 
 ## Shared Limitations
 
-- Misspecified feature representation can underfit nonlinear structure.
-- Coefficients can be unstable under collinearity without regularization.
-- Association is not causation.
-- Extrapolation can be unreliable.
-- Outliers, leverage, dependence, and distribution shift require explicit treatment.
-- Preprocessing must be learned without validation or test leakage.
+Feature misspecification, collinearity, unreliable extrapolation, leverage, and association being mistaken for causation.
+
+## Comparison Table
+
+| Member | Distinguishing choice | Training | Inference |
+|---|---|---|---|
+| [[Linear Regression]] | Canonical member | Member- and solver-dependent | Model-dependent |
+| [[Huber Regression]] | Specialized variant | Data-, precision-, and implementation-dependent | Model-dependent |
+
+Complexity must be stated on the member note with symbols, sparsity, solver, stopping rule, and backend; there is no valid universal family complexity.
 
 ## Related Families
 
+- [[Kernel Methods]]
 - [[Probabilistic Models]]
 - [[Bayesian Methods]]
-- [[Kernel Methods]]
-- [[Neural Networks]]
 
+## References
 
+- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
+- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.

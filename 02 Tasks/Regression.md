@@ -8,21 +8,19 @@ algorithm_families:
   - "[[Tree-Based Methods]]"
   - "[[Kernel Methods]]"
   - "[[Neural Networks]]"
-algorithms:
-  - "[[Linear Regression]]"
-  - "[[Ridge Regression]]"
-  - "[[Lasso Regression]]"
-  - "[[Elastic Net]]"
-  - "[[Huber Regression]]"
-  - "[[Bayesian Linear Regression]]"
+  - "[[Bayesian Methods]]"
+algorithms: []
 metrics:
   - "[[Mean Squared Error]]"
   - "[[Mean Absolute Error]]"
   - "[[Root Mean Squared Error]]"
   - "[[R Squared]]"
+datasets: []
 applications:
   - "[[Continuous Outcome Prediction]]"
-status: reviewed
+  - "[[Risk estimation]]"
+  - "[[Duration prediction]]"
+status: complete
 tags:
   - regression
 ---
@@ -31,59 +29,27 @@ tags:
 
 ## Problem Definition
 
-Regression predicts a continuous or quantitatively ordered response from one or more inputs. The task definition does not prescribe a model family, loss function, optimizer, solver, software library, or hardware backend.
+Predict a continuous or quantitatively ordered response; the task does not prescribe a model, loss, solver, library, or backend.
 
 ## Inputs
 
-A dataset of input-output pairs:
-
-$$
-\mathcal{\{D\}}
-=
-\{\,(x_i,y_i)\,\}_{i=1}^{n}
-$$
-
-with:
-
-$$
-x_i\in\mathcal{X}
-$$
-
-and commonly:
-
-$$
-y_i\in\mathbb{R}
-$$
-
-Targets may also be positive, bounded, counts, rates, or vectors. Their domain should influence model and likelihood choice.
+pairs $$(x_i,y_i)$$, commonly with $$y_i\in\mathbb{R}$$.
 
 ## Outputs
 
-A point predictor:
-
-$$
-\hat{f}:\mathcal{X}\rightarrow\mathbb{R}
-$$
-
-or a predictive distribution:
-
-$$
-\hat{p}(y\mid x)
-$$
-
-Uncertainty intervals, quantiles, or decisions may be derived when the model and evaluation design support them.
+point predictions, quantiles, intervals, or predictive distributions.
 
 ## Formal Setup
 
-Under squared-error risk, the population-optimal point prediction is the conditional mean:
+Under squared-error risk, $$f^{\star}(x)=\mathbb{E}[Y\mid X=x]$$; under absolute error it is a conditional median.
 
-$$
-f^{\star}(x)
-=
-\mathbb{E}[Y\mid X=x]
-$$
+## Subtasks
 
-Under absolute-error risk, it is a conditional median. Therefore, the loss function helps define the estimand rather than merely scoring an already fixed target.
+Common variants differ by supervision, output structure, horizon, whether uncertainty is required, and whether decisions are batch or online. These choices must be stated before comparing algorithms.
+
+## Common Assumptions
+
+Training and evaluation samples represent deployment after accounting for groups, time, exposure, censoring, and missingness. The chosen objective and metric must correspond to the intended estimand or decision cost.
 
 ## Algorithm Families
 
@@ -93,45 +59,41 @@ Under absolute-error risk, it is a conditional median. Therefore, the loss funct
 - [[Neural Networks]]
 - [[Bayesian Methods]]
 
-## Representative Algorithms
-
-- [[Linear Regression]]
-- [[Ridge Regression]]
-- [[Lasso Regression]]
-- [[Elastic Net]]
-- [[Huber Regression]]
-- [[Bayesian Linear Regression]]
+Algorithm families describe modelling strategies. Loss functions, optimizers, numerical solvers, library implementations, and hardware backends are separate layers.
 
 ## Evaluation Metrics
 
-- [[Mean Squared Error]] emphasizes large errors.
-- [[Root Mean Squared Error]] returns to the target's units.
-- [[Mean Absolute Error]] is less dominated by large residuals.
-- [[R Squared]] measures improvement relative to a mean baseline under its usual definition.
+- [[Mean Squared Error]]
+- [[Mean Absolute Error]]
+- [[Root Mean Squared Error]]
+- [[R Squared]]
 
-Metrics should be chosen before inspecting test performance and should match deployment costs. Time, group, and entity structure must be respected during splitting.
+Use deployment-realistic splits, uncertainty intervals, relevant subgroup slices, and a simple baseline. A metric is not the training algorithm even when the same mathematical function is used as a loss.
 
-## Common Failure Modes
+## Datasets
 
-- Leakage from preprocessing or target-derived features.
-- Extrapolation beyond observed support.
-- Distribution shift.
-- Inappropriate loss for the target domain or decision cost.
-- Reporting average error without subgroup or tail behaviour.
-- Confusing predictive association with causal effect.
-- Ignoring uncertainty when decisions are sensitive to it.
+Dataset choice must document provenance, license, sampling unit, target construction, temporal coverage, known leakage risks, and whether repeated entities cross splits.
 
 ## Applications
 
 - [[Continuous Outcome Prediction]]
-- Forecasting numeric demand or measurements.
-- Estimating risk, duration, cost, or intensity.
+- [[Risk estimation]]
+- [[Duration prediction]]
+
+## Failure Modes
+
+- Leakage from features, preprocessing, future data, duplicate entities, or label construction.
+- Distribution shift and unsupported extrapolation.
+- Optimizing a convenient proxy rather than deployment utility.
+- Reporting aggregate performance without uncertainty, tail behaviour, or subgroup checks.
+- Treating predictive association as a causal effect.
 
 ## Related Tasks
 
 - [[Classification]]
 - [[Forecasting]]
-- [[Time-Series Modelling]]
-- [[Ranking]]
 
+## References
 
+- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
+- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.

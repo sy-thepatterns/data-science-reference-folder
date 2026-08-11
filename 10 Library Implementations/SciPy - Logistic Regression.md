@@ -17,12 +17,6 @@ tags:
 
 A custom objective using native numerical tools for [[Logistic Regression]], whose defining objective is Bernoulli or multinomial negative log-likelihood, optionally regularized.
 
-## Support Level
-
-**Custom objective using native numerical tools.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -133,4 +127,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official SciPy documentation for the named API or building blocks.
 - [[Logistic Regression]]
 - [[Logistic Regression Implementation Comparison]]
-

@@ -17,12 +17,6 @@ tags:
 
 A custom differentiable implementation for [[Huber Regression]], whose defining objective is a linear predictor fitted with Huber residual loss.
 
-## Support Level
-
-**Custom differentiable implementation.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -134,4 +128,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official PyTorch documentation for the named API or building blocks.
 - [[Huber Regression]]
 - [[Huber Regression Implementation Comparison]]
-

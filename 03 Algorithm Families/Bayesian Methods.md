@@ -1,96 +1,74 @@
 ---
 type: algorithm-family
 name: Bayesian Methods
+parent_family: []
+tasks: []
 members:
   - "[[Bayesian Linear Regression]]"
   - "[[Gaussian Process]]"
-status: developing
+related:
+  - "[[Probabilistic Models]]"
+  - "[[Linear Models]]"
+status: complete
 tags:
-  - probabilistic
-  - bayesian
+  - bayesian-methods
 ---
 
 # Bayesian Methods
 
 ## Definition
 
-Bayesian methods combine a probability model and prior distribution with observed data to obtain a posterior distribution over unknown quantities.
+Use probability distributions to represent uncertainty about unknown quantities and update them by conditioning on observed data.
 
 ## Unifying Principle
 
-Bayes' theorem gives:
-
-$$
-p(\theta\mid\mathcal{\{D\}})
-=
-\frac{
-p(\mathcal{\{D\}}\mid\theta)p(\theta)
-}{
-p(\mathcal{\{D\}})
-}
-$$
-
-where:
-
-$$
-p(\mathcal{\{D\}})
-=
-\int
-p(\mathcal{\{D\}}\mid\theta)p(\theta)
-\,d\theta
-$$
-
-Predictions integrate over posterior uncertainty:
-
-$$
-p(y_{\star}\mid x_{\star},\mathcal{\{D\}})
-=
-\int
-p(y_{\star}\mid x_{\star},\theta)
-p(\theta\mid\mathcal{\{D\}})
-\,d\theta
-$$
+Members share the modelling structure below but may use different objectives, estimators, numerical solvers, implementations, and hardware. Those layers must be documented separately.
 
 ## Shared Mathematical Structure
 
-- A likelihood describes observations conditional on parameters.
-- A prior describes uncertainty before conditioning on the current data.
-- A posterior updates uncertainty after observing data.
-- A posterior predictive distribution integrates parameter uncertainty.
-- A decision rule may combine the posterior with a separate utility or loss.
+$$p(\theta\mid\mathcal{D})\propto p(\mathcal{D}\mid\theta)p(\theta)$$, with predictions obtained by posterior integration.
 
-Exact conjugate algebra, Markov chain Monte Carlo, variational inference, and Laplace approximation are different inference procedures. They are not the Bayesian model itself.
+## Typical Tasks
+
+Members may address [[Classification]], [[Regression]], [[Representation Learning]], [[Generative Modelling]], or structured decision tasks. Applicability depends on the individual member and objective.
 
 ## Members
 
 - [[Bayesian Linear Regression]]
 - [[Gaussian Process]]
 
+## Family Tree
+
+```text
+Bayesian Methods
+├── Bayesian Linear Regression
+├── Gaussian Process
+└── Gaussian Process
+```
+
 ## Shared Strengths
 
-- Explicit representation of uncertainty.
-- Coherent incorporation of prior information.
-- Posterior predictive distributions rather than only point estimates.
-- Natural hierarchical and sequential modelling.
+Explicit uncertainty, prior information, hierarchical structure, and coherent sequential updating.
 
 ## Shared Limitations
 
-- Sensitivity to likelihood and prior assumptions.
-- Exact inference may be unavailable or expensive.
-- Approximate inference requires separate validation.
-- Posterior certainty can be misleading under misspecification.
+Misspecification and prior sensitivity remain; exact inference is often unavailable, and approximation diagnostics are essential.
 
-## Diagnostics
+## Comparison Table
 
-- Prior predictive checks.
-- Posterior predictive checks.
-- Prior sensitivity analysis.
-- Calibration checks.
-- Sampling or approximation diagnostics appropriate to the inference procedure.
+| Member | Distinguishing choice | Training | Inference |
+|---|---|---|---|
+| [[Bayesian Linear Regression]] | Canonical member | Member- and solver-dependent | Model-dependent |
+| [[Gaussian Process]] | Specialized variant | Data-, precision-, and implementation-dependent | Model-dependent |
+
+Complexity must be stated on the member note with symbols, sparsity, solver, stopping rule, and backend; there is no valid universal family complexity.
 
 ## Related Families
 
 - [[Probabilistic Models]]
 - [[Linear Models]]
 
+## References
 
+- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
+- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.

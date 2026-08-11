@@ -17,12 +17,6 @@ tags:
 
 A native estimator for [[Ridge Regression]], whose defining objective is squared residual loss plus an L2 coefficient penalty.
 
-## Support Level
-
-**Native estimator.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -32,14 +26,14 @@ model = Ridge(alpha=1.0).fit(X, y)
 
 ## API and Fitting Route
 
-| Property | Value |
-|---|---|
-| Primary API | `sklearn.linear_model.Ridge` |
-| Fitting style | Solver-dispatch estimator; dense, sparse, and iterative routes |
-| Core solver route | auto selects among direct and iterative solvers |
-| Statistical inference | Limited |
-| Sparse support | Yes, solver-dependent |
-| GPU support | No standard route |
+| Property              | Value                                                          |
+| --------------------- | -------------------------------------------------------------- |
+| Primary API           | `sklearn.linear_model.Ridge`                                   |
+| Fitting style         | Solver-dispatch estimator; dense, sparse, and iterative routes |
+| Core solver route     | auto selects among direct and iterative solvers                |
+| Statistical inference | Limited                                                        |
+| Sparse support        | Yes, solver-dependent                                          |
+| GPU support           | No standard route                                              |
 
 ## Objective Mapping
 
@@ -134,4 +128,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official scikit-learn documentation for the named API or building blocks.
 - [[Ridge Regression]]
 - [[Ridge Regression Implementation Comparison]]
-

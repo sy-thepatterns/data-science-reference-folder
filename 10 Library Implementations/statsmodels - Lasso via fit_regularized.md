@@ -17,12 +17,6 @@ tags:
 
 A native regularized fitting route for [[Lasso Regression]], whose defining objective is squared residual loss plus an L1 coefficient penalty.
 
-## Support Level
-
-**Native regularized fitting route.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -133,4 +127,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official statsmodels documentation for the named API or building blocks.
 - [[Lasso Regression]]
 - [[Lasso Regression Implementation Comparison]]
-
