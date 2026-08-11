@@ -17,12 +17,6 @@ tags:
 
 A native empirical-bayes estimator for [[Bayesian Linear Regression]], whose defining objective is posterior and posterior-predictive inference for a linear Gaussian model.
 
-## Support Level
-
-**Native empirical-Bayes estimator.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -134,4 +128,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official scikit-learn documentation for the named API or building blocks.
 - [[Bayesian Linear Regression]]
 - [[Bayesian Linear Regression Implementation Comparison]]
-

@@ -3,81 +3,72 @@ type: mathematical-foundation
 name: Least Squares
 domain:
   - Optimization
-  - Statistics
+prerequisites: []
 used_by:
   - "[[Linear Regression]]"
-solvers:
-  - "[[Normal Equations]]"
-  - "[[QR Decomposition]]"
-  - "[[Singular Value Decomposition]]"
-status: reviewed
+  - "[[Ridge Regression]]"
+  - "[[Matrix Factorization]]"
+related: []
+status: complete
 tags:
-  - convex
   - optimization
 ---
 
 # Least Squares
 
-## Problem
+## Definition
 
-Given:
+Given $$A\in\mathbb{R}^{m\times n}$$ and $$b\in\mathbb{R}^m$$, solve $$x^{\star}=\arg\min_x\lVert Ax-b\rVert_2^2$$.
 
-$$
-A \in \mathbb{R}^{m \times n}
-$$
+## Formal Statement
 
-and:
+The gradient is $$2A^T(Ax-b)$$ and the Hessian $$2A^TA\succeq0$$. At an optimum, $$A^T(Ax-b)=0$$.
 
-$$
-b \in \mathbb{R}^{m}
-$$
+## Notation
 
-find:
+Symbols denote mathematical objects independently of any array class, numerical routine, library, or processor. Dimensions and assumptions should be declared where the concept is used.
 
-$$
-x^{\star}
-=
-\arg\min_x
-\lVert Ax-b\rVert_2^2
-$$
+## Intuition
 
-## Geometry
+The fitted vector is an orthogonal projection onto the column space of $$A$$; a rank-deficient problem may have many coefficient solutions but one fitted vector.
 
-The fitted vector $$Ax^{\star}$$ is the orthogonal projection of $$b$$ onto the column space of $$A$$.
+## Derivation or Proof
 
-At an optimum, the residual:
+The defining identities follow from the underlying algebra or probability axioms. A full proof depends on the selected field and is separate from numerical procedures used to approximate the quantity.
 
-$$
-r=b-Ax^{\star}
-$$
+## Geometric or Statistical Interpretation
 
-is orthogonal to every column of $$A$$:
+The fitted vector is an orthogonal projection onto the column space of $$A$$; a rank-deficient problem may have many coefficient solutions but one fitted vector.
 
-$$
-A^{T}r=0
-$$
+## Algorithmic Form
 
-Therefore:
+There are multiple valid computational procedures. The mathematical object does not specify a numerical algorithm, software implementation, low-level backend, or hardware device.
 
-$$
-A^{T}Ax^{\star}=A^{T}b
-$$
+## Computational Complexity
 
-These are the normal equations.
+Dense solver costs differ: normal equations, QR, and SVD have different constants and stability; iterative solvers depend on sparsity, conditioning, tolerance, and iterations.
 
-## Convexity
+## Numerical Considerations
 
-The Hessian is:
+Finite-precision results depend on conditioning, scaling, data representation, precision, and the chosen stable algorithm. Mathematical equality must not be confused with floating-point equality.
 
-$$
-\nabla^2
-\lVert Ax-b\rVert_2^2
-=
-2A^{T}A
-$$
+## Used By
 
-Since $$A^{T}A$$ is positive semidefinite, the problem is convex. It is strictly convex and has a unique minimizer when $$A$$ has full column rank.
+- [[Linear Regression]]
+- [[Ridge Regression]]
+- [[Matrix Factorization]]
 
-## Solver Choice
+## Depends On
 
-The normal equations are mathematically direct but can be less numerically stable because forming $$A^{T}A$$ squares the condition number. QR or SVD-based solvers are generally preferred when numerical stability matters.
+- Basic arithmetic and the definitions stated above.
+
+## Related Concepts
+
+- [[Linear Algebra]]
+- [[Probability]]
+- [[Numerical Stability]]
+
+## References
+
+- Strang, *Introduction to Linear Algebra*, 6th ed., 2023.
+- Wasserman, *All of Statistics*, 2004.

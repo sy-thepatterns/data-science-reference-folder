@@ -3,72 +3,72 @@ type: mathematical-foundation
 name: Matrix Multiplication
 domain:
   - Linear Algebra
+prerequisites: []
 used_by:
   - "[[Linear Regression]]"
   - "[[Normal Equations]]"
-status: reviewed
+  - "[[Neural Networks]]"
+related: []
+status: complete
 tags:
   - linear-algebra
-  - computational-complexity
 ---
 
 # Matrix Multiplication
 
 ## Definition
 
-For:
+For $$A\in\mathbb{R}^{m\times k}$$ and $$B\in\mathbb{R}^{k\times n}$$, $$C=AB$$ has $$C_{ij}=\sum_{r=1}^{k}A_{ir}B_{rj}$$.
 
-$$
-A \in \mathbb{R}^{m \times k}
-$$
+## Formal Statement
 
-and:
+The product represents composition of linear maps and is associative but generally not commutative. Transposition reverses order: $$(AB)^T=B^TA^T$$.
 
-$$
-B \in \mathbb{R}^{k \times n}
-$$
+## Notation
 
-the product $$C=AB$$ has entries:
+Symbols denote mathematical objects independently of any array class, numerical routine, library, or processor. Dimensions and assumptions should be declared where the concept is used.
 
-$$
-C_{ij}
-=
-\sum_{r=1}^{k}
-A_{ir}B_{rj}
-$$
+## Intuition
 
-## Classical Complexity
+Each output column is a linear combination of columns of $$A$$; each output row is a combination of rows of $$B$$.
 
-The direct algorithm computes $$mn$$ output entries, each requiring $$k$$ multiply-add terms:
+## Derivation or Proof
 
-$$
-T(m,k,n)=O(mkn)
-$$
+The defining identities follow from the underlying algebra or probability axioms. A full proof depends on the selected field and is separate from numerical procedures used to approximate the quantity.
 
-The output itself requires:
+## Geometric or Statistical Interpretation
 
-$$
-O(mn)
-$$
+Each output column is a linear combination of columns of $$A$$; each output row is a combination of rows of $$B$$.
 
-space.
+## Algorithmic Form
 
-## Linear Regression Example
+There are multiple valid computational procedures. The mathematical object does not specify a numerical algorithm, software implementation, low-level backend, or hardware device.
 
-For:
+## Computational Complexity
 
-$$
-X \in \mathbb{R}^{n \times p}
-$$
+Classical dense multiplication costs $$O(mkn)$$ time and $$O(mn)$$ output storage; actual performance depends on sparsity, layout, blocking, precision, and backend.
 
-computing:
+## Numerical Considerations
 
-$$
-X^{T}X
-$$
+Finite-precision results depend on conditioning, scaling, data representation, precision, and the chosen stable algorithm. Mathematical equality must not be confused with floating-point equality.
 
-with the classical dense algorithm costs:
+## Used By
 
-$$
-O(np^2)
-$$
+- [[Linear Regression]]
+- [[Normal Equations]]
+- [[Neural Networks]]
+
+## Depends On
+
+- Basic arithmetic and the definitions stated above.
+
+## Related Concepts
+
+- [[Linear Algebra]]
+- [[Probability]]
+- [[Numerical Stability]]
+
+## References
+
+- Strang, *Introduction to Linear Algebra*, 6th ed., 2023.
+- Wasserman, *All of Statistics*, 2004.

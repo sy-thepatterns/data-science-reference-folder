@@ -17,12 +17,6 @@ tags:
 
 A custom construction; no dedicated estimator for [[Lasso Regression]], whose defining objective is squared residual loss plus an L1 coefficient penalty.
 
-## Support Level
-
-**Custom construction; no dedicated estimator.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -133,4 +127,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official SciPy documentation for the named API or building blocks.
 - [[Lasso Regression]]
 - [[Lasso Regression Implementation Comparison]]
-

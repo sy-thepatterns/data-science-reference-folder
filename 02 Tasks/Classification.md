@@ -7,13 +7,22 @@ algorithm_families:
   - "[[Linear Models]]"
   - "[[Tree-Based Methods]]"
   - "[[Kernel Methods]]"
+  - "[[Nearest-Neighbour Methods]]"
   - "[[Neural Networks]]"
-algorithms:
-  - "[[Logistic Regression]]"
-metrics: []
+  - "[[Probabilistic Models]]"
+algorithms: []
+metrics:
+  - "[[Accuracy]]"
+  - "[[Precision]]"
+  - "[[Recall]]"
+  - "[[F1 Score]]"
+  - "[[Log Loss]]"
 datasets: []
-applications: []
-status: developing
+applications:
+  - "[[Diagnosis support]]"
+  - "[[Document routing]]"
+  - "[[Image recognition]]"
+status: complete
 tags:
   - classification
 ---
@@ -22,62 +31,27 @@ tags:
 
 ## Problem Definition
 
-Classification assigns an input to one or more discrete classes or estimates probabilities over those classes. The task is distinct from the algorithm used to solve it.
+Assign inputs to discrete classes or estimate probabilities over those classes.
 
 ## Inputs
 
-A labelled dataset:
-
-$$
-\mathcal{\{D\}}
-=
-\{\,(x_i,y_i)\,\}_{i=1}^{n}
-$$
-
-with:
-
-$$
-x_i\in\mathcal{X}
-$$
-
-and, for single-label classification:
-
-$$
-y_i\in\{1,\ldots,k\}
-$$
+labelled pairs $$(x_i,y_i)$$ with $$y_i\in\{1,\ldots,k\}$$.
 
 ## Outputs
 
-A hard classifier:
-
-$$
-\hat{g}:\mathcal{X}\rightarrow\{1,\ldots,k\}
-$$
-
-or class probabilities:
-
-$$
-\hat{p}(y=c\mid x)
-$$
-
-for each class:
-
-$$
-c\in\{1,\ldots,k\}
-$$
+hard labels, class scores, or probabilities $$p(y=c\mid x)$$.
 
 ## Formal Setup
 
-With zero-one loss, the Bayes-optimal classifier predicts a class with greatest conditional probability:
+The Bayes classifier chooses $$g^{\star}(x)\in\arg\max_c P(Y=c\mid X=x)$$ under equal misclassification costs.
 
-$$
-g^{\star}(x)
-\in
-\arg\max_c
-P(Y=c\mid X=x)
-$$
+## Subtasks
 
-Real systems may instead choose actions that minimize expected cost under asymmetric errors. Probability estimation and the downstream decision rule should therefore be evaluated separately.
+Common variants differ by supervision, output structure, horizon, whether uncertainty is required, and whether decisions are batch or online. These choices must be stated before comparing algorithms.
+
+## Common Assumptions
+
+Training and evaluation samples represent deployment after accounting for groups, time, exposure, censoring, and missingness. The chosen objective and metric must correspond to the intended estimand or decision cost.
 
 ## Algorithm Families
 
@@ -88,29 +62,43 @@ Real systems may instead choose actions that minimize expected cost under asymme
 - [[Neural Networks]]
 - [[Probabilistic Models]]
 
-## Representative Algorithm
+Algorithm families describe modelling strategies. Loss functions, optimizers, numerical solvers, library implementations, and hardware backends are separate layers.
 
-- [[Logistic Regression]]
+## Evaluation Metrics
 
-## Evaluation
+- [[Accuracy]]
+- [[Precision]]
+- [[Recall]]
+- [[F1 Score]]
+- [[Log Loss]]
 
-Appropriate evaluation can include discrimination, calibration, threshold-dependent error, subgroup performance, and deployment cost. Accuracy alone is often insufficient under class imbalance.
+Use deployment-realistic splits, uncertainty intervals, relevant subgroup slices, and a simple baseline. A metric is not the training algorithm even when the same mathematical function is used as a loss.
 
-## Common Failure Modes
+## Datasets
 
-- Label leakage or inconsistent label definitions.
-- Imbalanced classes concealed by aggregate accuracy.
-- Threshold selection on the final test set.
-- Dataset shift and changing class prevalence.
-- Poor probability calibration.
-- Unseen categories or classes at deployment.
-- Treating predictive labels as causal conclusions.
+Dataset choice must document provenance, license, sampling unit, target construction, temporal coverage, known leakage risks, and whether repeated entities cross splits.
+
+## Applications
+
+- [[Diagnosis support]]
+- [[Document routing]]
+- [[Image recognition]]
+
+## Failure Modes
+
+- Leakage from features, preprocessing, future data, duplicate entities, or label construction.
+- Distribution shift and unsupported extrapolation.
+- Optimizing a convenient proxy rather than deployment utility.
+- Reporting aggregate performance without uncertainty, tail behaviour, or subgroup checks.
+- Treating predictive association as a causal effect.
 
 ## Related Tasks
 
 - [[Regression]]
 - [[Ranking]]
 - [[Anomaly Detection]]
-- [[Multi-Label Classification]]
 
+## References
 
+- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
+- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.

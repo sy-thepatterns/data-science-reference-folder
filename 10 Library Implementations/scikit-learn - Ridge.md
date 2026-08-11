@@ -17,12 +17,6 @@ tags:
 
 A native estimator for [[Ridge Regression]], whose defining objective is squared residual loss plus an L2 coefficient penalty.
 
-## Support Level
-
-**Native estimator.**
-
-This note describes the software route separately from the mathematical model, numerical solver, backend, and hardware.
-
 ## Public API
 
 ```python
@@ -134,4 +128,3 @@ Use this route when its API level, solver behaviour, inference outputs, ecosyste
 - Official scikit-learn documentation for the named API or building blocks.
 - [[Ridge Regression]]
 - [[Ridge Regression Implementation Comparison]]
-
