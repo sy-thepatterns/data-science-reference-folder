@@ -16,6 +16,14 @@ tags:
 
 # Continuous Outcome Prediction
 
+## Notation
+
+This note introduces no special mathematical symbols. Code identifiers, class names, routine names, and hardware names are literal technical names rather than algebraic variables.
+
+## Intuition
+
+This application is the real-world question at the top of the stack. Many different models can serve it, and the best mathematical score is not automatically the best practical decision unless costs, constraints, uncertainty, and people are considered.
+
 ## Problem Context
 
 Estimate a quantitative target from observed features.

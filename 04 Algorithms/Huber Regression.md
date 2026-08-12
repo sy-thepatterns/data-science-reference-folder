@@ -49,6 +49,49 @@ Huber regression fits a linear predictor using a loss that is quadratic for smal
 
 It is robust to vertical outliers, not automatically to high-leverage points in the feature space.
 
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| $n$ | Number of observed examples or rows. |
+| $p$ | Number of input features or columns. |
+| $x_i$ | Feature vector for example $i$. |
+| $y_i$ | Observed target or label for example $i$. |
+| $X$ | Design matrix whose row $i$ is $x_i^T$; usually $X\in\mathbb{R}^{n\times p}$. |
+| $y$ | Vector of all observed targets. |
+| $\theta$ | Generic collection of parameters learned by a model. |
+| $\ell$ | Loss assigned to a prediction and its observed target. |
+| $\beta_0$ | Intercept: the prediction when all represented features are zero. |
+| $\beta$ | Vector of $p$ coefficients; $\beta_j$ controls feature $j$ while other represented features are held fixed. |
+| $\hat{\beta}$ | Estimated coefficient vector; a hat marks a quantity learned from data. |
+| $X\beta$ | Vector of linear predictions before adding a separate intercept. |
+| $\varepsilon$ | Unobserved error: the part of $y$ not represented by the linear mean model. |
+| $r=y-X\beta$ | Residual vector: observed values minus fitted values. |
+| $r_i$ | Residual for example $i$: observed minus predicted value. |
+| $\sigma$ | Positive residual scale used to make errors comparable. |
+| $u_i=r_i/\sigma$ | Standardized residual. |
+| $\delta$ | Positive cutoff between quadratic treatment of small errors and linear treatment of large errors. |
+| $\rho_\delta$ | Huber loss. |
+| $\psi_\delta$ | Derivative or score of the Huber loss. |
+| $w_i$ | Robust weight assigned to example $i$ in an iteratively reweighted solver. |
+| $R(\beta,\sigma)$ | Estimator-specific regularization or scale term. |
+| $m$ | Number of new rows predicted at once, when distinguished from the $n$ training rows. |
+| $T$ | Number of iterative optimization steps or sweeps. |
+| $\operatorname{nnz}(X)$ | Number of stored nonzero entries in a sparse matrix $X$. |
+| $O(\cdot)$ | Big-O growth rate; it describes scaling, not an exact runtime. |
+
+## Intuition
+
+Small mistakes are treated like squared error because they are useful for fine adjustment. Once a mistake is very large, Huber loss stops letting it dominate the lesson. It still counts the mistake, but its influence grows like a straight line instead of exploding like a square.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Check that the quadratic and linear pieces of $\rho_\delta$ meet with the same value and slope at $|u|=\delta$.
+- Differentiate each piece to obtain the bounded score function $\psi_\delta$.
+- Derive the iteratively reweighted form from $w_i=\psi(u_i)/u_i$ for nonzero residuals.
+
 ## Problem Definition
 
 For residual:
@@ -225,18 +268,87 @@ $$
 
 ## Advantages
 
-- Convex residual loss.
-- Less sensitive to large response residuals than squared loss.
-- Retains quadratic sensitivity near zero.
-- Linear prediction remains interpretable and inexpensive.
+### Bounded residual influence
 
-## Limitations and Failure Modes
+The Huber score satisfies
 
-- Does not inherently protect against high-leverage feature outliers.
-- Threshold and scale conventions vary across implementations.
-- Heavy contamination may require higher-breakdown estimators.
-- Optimization is iterative rather than a single ordinary least-squares solve.
-- Feature scaling and regularization selection can leak validation data.
+$$
+\psi_\delta(u)=\begin{cases}u,&|u|\le\delta\\ \delta\operatorname{sign}(u),&|u|>\delta\end{cases}
+$$
+
+so a residual’s gradient contribution stops growing in magnitude after the threshold. This limits the effect of large vertical errors compared with squared loss.
+
+### Quadratic efficiency near the center
+
+For $|u|\le\delta$, the loss is $u^2/2$. Small residuals receive smooth quadratic treatment, allowing efficient estimation when most errors are approximately Gaussian.
+
+### Linear tails
+
+For $|u|>\delta$, loss grows approximately as $\delta|u|$. Large errors still matter, but their objective contribution grows linearly rather than quadratically.
+
+### Convex optimization
+
+The Huber loss is convex and continuously differentiable. With a linear predictor and convex coefficient penalty, every local minimum is global.
+
+### Interpretable robust weights
+
+The iteratively reweighted view gives weight $w_i=\psi(u_i)/u_i$. Large standardized residuals receive weights near $\delta/|u_i|$, making the source of robustness inspectable.
+
+### Smooth bridge between loss regimes
+
+The threshold $\delta$ controls a continuous compromise between squared-error efficiency and absolute-error robustness rather than requiring a hard decision to discard observations.
+
+## Limitations
+
+### Not robust to leverage by itself
+
+Huber bounds influence with respect to residual size, but a point with extreme $x_i$ can rotate the fitted hyperplane and acquire a small residual. Robustness in response space does not guarantee robustness in feature space.
+
+### Threshold–scale coupling
+
+The rule applies to standardized residual $u_i=r_i/\sigma$. If the scale estimate is distorted, the effective cutoff $\delta\sigma$ is wrong and points are downweighted too early or too late.
+
+### Low breakdown under heavy contamination
+
+Huber’s estimator can be overwhelmed when a substantial fraction of observations is adversarial or strategically placed. Higher-breakdown methods may be required.
+
+### Reduced efficiency under clean Gaussian noise
+
+Clipping scores discards some information from legitimate tail observations. A small $\delta$ increases robustness but can raise variance when the Gaussian model is correct.
+
+### Iterative fitting
+
+Unlike a single full-rank least-squares characterization, joint coefficient and scale estimation normally requires iteration. Statistical convergence and optimization convergence are separate concerns.
+
+### Conditional-mean structure remains linear
+
+Robust loss protects against some residual contamination; it does not add missing nonlinearities, interactions, or causal identification.
+
+## Failure Modes
+
+### Bad initial scale
+
+An inflated scale treats outliers as ordinary residuals; a collapsed scale marks most points as outliers. Robust initialization and scale monitoring are essential.
+
+### High-leverage masking
+
+A cluster of extreme feature points can pull the fit toward itself and appear to have modest residuals, hiding its influence from residual-based weights.
+
+### Threshold convention mismatch
+
+Implementations differ in loss scaling, scale estimation, regularization, and threshold naming. Copying $\delta$ or epsilon values across them may not preserve the same estimator.
+
+### Convergence to an inaccurate numerical solution
+
+Tight coupling between weights, scale, and coefficients can produce slow progress. A returned result must be checked against gradient, parameter-change, or objective tolerances.
+
+### Treating downweighting as data cleaning
+
+A small weight does not prove an observation is erroneous. It may represent a rare but valid subgroup whose exclusion harms deployment performance.
+
+### Contamination plus shift
+
+A threshold tuned on one residual distribution may behave poorly after variance or tail behavior changes, causing widespread downweighting or renewed sensitivity.
 
 ## Diagnostics
 

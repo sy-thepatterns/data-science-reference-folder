@@ -9,6 +9,14 @@ website is here! https://sy-thepatterns.com/library
 
 # Machine Learning & Deep Learning Reference
 
+## Notation
+
+This note introduces no special mathematical symbols. Code identifiers, class names, routine names, and hardware names are literal technical names rather than algebraic variables.
+
+## Intuition
+
+Use this page as the front door to the vault. It organizes routes between ideas while keeping mathematical models, objectives, solvers, software, backends, and hardware as separate layers.
+
 This vault is a connected technical reference for tracing machine learning and deep learning methods through the complete computational stack:
 
 Mathematical foundations <br>

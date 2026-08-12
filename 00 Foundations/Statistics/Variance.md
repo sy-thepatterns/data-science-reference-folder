@@ -18,23 +18,37 @@ tags:
 
 ## Definition
 
-For square-integrable $$Z$$, $$\operatorname{Var}(Z)=\mathbb{E}[(Z-\mathbb{E}[Z])^2]=\mathbb{E}[Z^2]-\mathbb{E}[Z]^2$$.
+For square-integrable $Z$, $\operatorname{Var}(Z)=\mathbb{E}[(Z-\mathbb{E}[Z])^2]=\mathbb{E}[Z^2]-\mathbb{E}[Z]^2$.
 
 ## Formal Statement
 
-Variance is nonnegative and $$\operatorname{Var}(aZ+b)=a^2\operatorname{Var}(Z)$$. For dependent sums, covariance terms must be retained.
+Variance is nonnegative and $\operatorname{Var}(aZ+b)=a^2\operatorname{Var}(Z)$. For dependent sums, covariance terms must be retained.
 
 ## Notation
 
-Symbols denote mathematical objects independently of any array class, numerical routine, library, or processor. Dimensions and assumptions should be declared where the concept is used.
+| Symbol | Meaning |
+|---|---|
+| $Z$ | Random variable whose spread is measured. |
+| $\mathbb{E}[Z]$ | Mean or balance point of $Z$. |
+| $\operatorname{Var}(Z)$ | Expected squared distance from $Z$ to its mean. |
+| $a,b$ | Fixed constants in a rescaling and shift. |
+| $X,y$ | Input matrix and response vector in the regression example. |
+| $\varepsilon$ | Regression error vector. |
+| $\sigma^2$ | Common error variance under homoscedasticity. |
+| $I$ | Identity matrix, meaning different error coordinates have zero covariance in the stated model. |
+| $\operatorname{Cov}$ | Covariance, which measures how two random quantities vary together. |
 
 ## Intuition
 
-Variance measures squared dispersion around the mean, not uncertainty about a parameter unless a probabilistic model gives that interpretation.
+Two classes can have the same average test score but feel very different: one class might cluster near the average, while another has many very high and very low scores. Variance measures that spread by squaring each distance from the average, so opposite directions cannot cancel.
 
 ## Derivation or Proof
 
-The defining identities follow from the underlying algebra or probability axioms. A full proof depends on the selected field and is separate from numerical procedures used to approximate the quantity.
+These are useful routes for checking why the main equations work:
+
+- Expand the square to prove $\operatorname{Var}(Z)=\mathbb{E}[Z^2]-\mathbb{E}[Z]^2$.
+- Substitute $aZ+b$ into the definition to prove $\operatorname{Var}(aZ+b)=a^2\operatorname{Var}(Z)$.
+- Expand the variance of a sum to derive covariance terms and see exactly when variances may be added.
 
 ## Geometric or Statistical Interpretation
 
@@ -46,7 +60,7 @@ There are multiple valid computational procedures. The mathematical object does 
 
 ## Computational Complexity
 
-One-pass stable estimators such as Welford's algorithm cost $$O(n)$$ time and constant storage; naive subtraction can suffer catastrophic cancellation.
+One-pass stable estimators such as Welford's algorithm cost $O(n)$ time and constant storage; naive subtraction can suffer catastrophic cancellation.
 
 ## Numerical Considerations
 

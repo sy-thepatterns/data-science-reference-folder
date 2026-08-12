@@ -22,23 +22,34 @@ Matrix rank is the dimension of the column space, equivalently the row space and
 
 ## Formal Statement
 
-For $$A\in\mathbb{R}^{m\times n}$$, $$0\le\operatorname{rank}(A)\le\min(m,n)$$ and $$\operatorname{rank}(A)=n$$ means full column rank.
+For $A\in\mathbb{R}^{m\times n}$, $0\le\operatorname{rank}(A)\le\min(m,n)$ and $\operatorname{rank}(A)=n$ means full column rank.
 
 ## Notation
 
-Symbols denote mathematical objects independently of any array class, numerical routine, library, or processor. Dimensions and assumptions should be declared where the concept is used.
+| Symbol | Meaning |
+|---|---|
+| $A,X$ | A matrix viewed as a linear map or collection of row and column vectors. |
+| $\operatorname{rank}(A)$ | Number of linearly independent columns, equivalently independent rows or nonzero singular values. |
+| $m,n,p$ | Matrix dimensions; context states which symbol counts rows or columns. |
+| $\ker(A)$ | Null space: vectors mapped to zero by $A$. |
+| $\dim$ | Dimension: number of vectors in a basis. |
+| $X^TX$ | Gram matrix of the columns of $X$. |
 
 ## Intuition
 
-Rank counts independent directions preserved by a linear map. The nullity satisfies $$\operatorname{rank}(A)+\dim\ker(A)=n$$.
+Rank counts how many genuinely different directions a matrix contains. If one column can be rebuilt from the others, it adds no new direction and does not increase rank. Low rank therefore means some recorded columns are repeats or mixtures of the same underlying information.
 
 ## Derivation or Proof
 
-The defining identities follow from the underlying algebra or probability axioms. A full proof depends on the selected field and is separate from numerical procedures used to approximate the quantity.
+These are useful routes for checking why the main equations work:
+
+- Prove row rank equals column rank using Gaussian elimination and the invariance of rank under elementary row operations.
+- Use the rank-nullity theorem to show $\operatorname{rank}(A)+\dim\ker(A)=n$ for a matrix with $n$ columns.
+- Use the SVD to prove that rank equals the number of nonzero singular values.
 
 ## Geometric or Statistical Interpretation
 
-Rank counts independent directions preserved by a linear map. The nullity satisfies $$\operatorname{rank}(A)+\dim\ker(A)=n$$.
+Rank counts independent directions preserved by a linear map. The nullity satisfies $\operatorname{rank}(A)+\dim\ker(A)=n$.
 
 ## Algorithmic Form
 

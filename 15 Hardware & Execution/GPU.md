@@ -15,6 +15,14 @@ tags:
 
 # GPU
 
+## Notation
+
+This note introduces no special mathematical symbols. Code identifiers, class names, routine names, and hardware names are literal technical names rather than algebraic variables.
+
+## Intuition
+
+Hardware is the physical machinery that performs arithmetic. It can make the same numerical procedure faster or slower, but changing the machine does not change the definition of the model, objective, or solver.
+
 ## Role in Machine Learning
 
 GPUs accelerate large, regular, parallel tensor operations. They are especially useful for large batches, high-dimensional dense matrices, and deep-learning workloads.

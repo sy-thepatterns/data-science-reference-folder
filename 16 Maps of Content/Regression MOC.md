@@ -10,6 +10,14 @@ tags:
 
 # Regression MOC
 
+## Notation
+
+This note introduces no special mathematical symbols. Code identifiers, class names, routine names, and hardware names are literal technical names rather than algebraic variables.
+
+## Intuition
+
+A map of content is like a subway map for the vault: it shows useful routes between ideas without claiming that nearby stops are the same thing.
+
 ## Task
 
 - [[Regression]]
@@ -64,5 +72,4 @@ tags:
 
 - [[Linear Regression Computational Pipeline]]
 - [[Linear Regression Implementation Comparison]]
-
 

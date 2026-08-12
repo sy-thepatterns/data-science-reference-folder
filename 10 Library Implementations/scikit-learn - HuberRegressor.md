@@ -17,6 +17,49 @@ tags:
 
 A native scale-aware estimator for [[Huber Regression]], whose defining objective is a linear predictor fitted with Huber residual loss.
 
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| $n$ | Number of observed examples or rows. |
+| $p$ | Number of input features or columns. |
+| $x_i$ | Feature vector for example $i$. |
+| $y_i$ | Observed target or label for example $i$. |
+| $X$ | Design matrix whose row $i$ is $x_i^T$; usually $X\in\mathbb{R}^{n\times p}$. |
+| $y$ | Vector of all observed targets. |
+| $\theta$ | Generic collection of parameters learned by a model. |
+| $\ell$ | Loss assigned to a prediction and its observed target. |
+| $\beta_0$ | Intercept: the prediction when all represented features are zero. |
+| $\beta$ | Vector of $p$ coefficients; $\beta_j$ controls feature $j$ while other represented features are held fixed. |
+| $\hat{\beta}$ | Estimated coefficient vector; a hat marks a quantity learned from data. |
+| $X\beta$ | Vector of linear predictions before adding a separate intercept. |
+| $\varepsilon$ | Unobserved error: the part of $y$ not represented by the linear mean model. |
+| $r=y-X\beta$ | Residual vector: observed values minus fitted values. |
+| $r_i$ | Residual for example $i$: observed minus predicted value. |
+| $\sigma$ | Positive residual scale used to make errors comparable. |
+| $u_i=r_i/\sigma$ | Standardized residual. |
+| $\delta$ | Positive cutoff between quadratic treatment of small errors and linear treatment of large errors. |
+| $\rho_\delta$ | Huber loss. |
+| $\psi_\delta$ | Derivative or score of the Huber loss. |
+| $w_i$ | Robust weight assigned to example $i$ in an iteratively reweighted solver. |
+| $R(\beta,\sigma)$ | Estimator-specific regularization or scale term. |
+| $m$ | Number of new rows predicted at once, when distinguished from the $n$ training rows. |
+| $T$ | Number of iterative optimization steps or sweeps. |
+| $\operatorname{nnz}(X)$ | Number of stored nonzero entries in a sparse matrix $X$. |
+| $O(\cdot)$ | Big-O growth rate; it describes scaling, not an exact runtime. |
+
+## Intuition
+
+Small mistakes are treated like squared error because they are useful for fine adjustment. Once a mistake is very large, Huber loss stops letting it dominate the lesson. It still counts the mistake, but its influence grows like a straight line instead of exploding like a square.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Check that the quadratic and linear pieces of $\rho_\delta$ meet with the same value and slope at $|u|=\delta$.
+- Differentiate each piece to obtain the bounded score function $\psi_\delta$.
+- Derive the iteratively reweighted form from $w_i=\psi(u_i)/u_i$ for nonzero residuals.
+
 ## Public API
 
 ```python

@@ -116,7 +116,7 @@ $$
 \hat{\beta}_0 \in \mathbb{R}
 $$
 
-Predictions for new rows $$X_{\mathrm{new}}$$ are:
+Predictions for new rows $X_{\mathrm{new}}$ are:
 
 $$
 \hat{y}_{\mathrm{new}}
@@ -128,21 +128,49 @@ $$
 
 ## Notation
 
-| Symbol | Meaning | Shape |
-|---|---|---|
-| $$n$$ | Number of observations | Scalar |
-| $$p$$ | Number of features | Scalar |
-| $$X$$ | Design matrix | $$n\times p$$ |
-| $$y$$ | Target vector | $$n$$ |
-| $$\beta$$ | Coefficient vector | $$p$$ |
-| $$\beta_0$$ | Intercept | Scalar |
-| $$\varepsilon$$ | Error vector | $$n$$ |
-| $$\hat{y}$$ | Fitted values | $$n$$ |
-| $$r$$ | Residual vector | $$n$$ |
+| Symbol | Meaning |
+|---|---|
+| $n$ | Number of observed examples or rows. |
+| $p$ | Number of input features or columns. |
+| $x_i$ | Feature vector for example $i$. |
+| $y_i$ | Observed target or label for example $i$. |
+| $X$ | Design matrix whose row $i$ is $x_i^T$; usually $X\in\mathbb{R}^{n\times p}$. |
+| $y$ | Vector of all observed targets. |
+| $\theta$ | Generic collection of parameters learned by a model. |
+| $\ell$ | Loss assigned to a prediction and its observed target. |
+| $\beta_0$ | Intercept: the prediction when all represented features are zero. |
+| $\beta$ | Vector of $p$ coefficients; $\beta_j$ controls feature $j$ while other represented features are held fixed. |
+| $\hat{\beta}$ | Estimated coefficient vector; a hat marks a quantity learned from data. |
+| $X\beta$ | Vector of linear predictions before adding a separate intercept. |
+| $\varepsilon$ | Unobserved error: the part of $y$ not represented by the linear mean model. |
+| $r=y-X\beta$ | Residual vector: observed values minus fitted values. |
+| $\hat y$ | Vector of fitted or predicted responses. |
+| $w_i$ | Optional nonnegative importance weight for example $i$. |
+| $\mathbb{E}[\cdot]$ | Expected value under the stated probability model. |
+| $\operatorname{Var}(\cdot)$ | Variance, measuring squared spread around an expectation. |
+| $\lVert\cdot\rVert_2$ | Euclidean norm; its square sums squared entries. |
+| $I$ | Identity matrix. |
+| $\sigma^2$ | Error variance under a homoscedastic model. |
+| $m$ | Number of new rows predicted at once, when distinguished from the $n$ training rows. |
+| $T$ | Number of iterative optimization steps or sweeps. |
+| $\operatorname{nnz}(X)$ | Number of stored nonzero entries in a sparse matrix $X$. |
+| $O(\cdot)$ | Big-O growth rate; it describes scaling, not an exact runtime. |
+
+## Intuition
+
+Imagine fitting a flat sheet through a cloud of points. Each coefficient tilts the sheet in one feature direction. Least squares chooses the tilt that makes the combined vertical misses as small as possible, while the residuals are the arrows from the sheet to the observed points.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Expand $\lVert y-X\beta\rVert_2^2$, differentiate, and set the gradient to zero to obtain the normal equations.
+- Use orthogonal projection to prove that the fitted vector lies in the column space of $X$ and the residual is perpendicular to that space.
+- Prove convexity by showing the Hessian $2X^TX$ is positive semidefinite.
 
 ## Formal Statistical Model
 
-Without writing the intercept separately, assume a column of ones is included in $$X$$
+Without writing the intercept separately, assume a column of ones is included in $X$
 
 $$
 y=X\beta+\varepsilon
@@ -182,7 +210,7 @@ y_i-x_i^{T}\beta
 \right)^2
 $$
 
-or [[Mean Squared Error]], which differs only by the positive constant factor $$1/n$$.
+or [[Mean Squared Error]], which differs only by the positive constant factor $1/n$.
 
 ## Derivation of the Normal Equations
 
@@ -206,7 +234,7 @@ y^{T}y
 \beta^{T}X^{T}X\beta
 $$
 
-Differentiate with respect to $$\beta$$:
+Differentiate with respect to $\beta$:
 
 $$
 \nabla_\beta L
@@ -234,7 +262,7 @@ X^{T}X\hat{\beta}
 X^{T}y
 $$
 
-If $$X$$ has full column rank:
+If $X$ has full column rank:
 
 $$
 \hat{\beta}
@@ -252,7 +280,7 @@ $$
 \hat{y}=X\hat{\beta}
 $$
 
-is the orthogonal projection of $$y$$ onto the column space of $$X$$.
+is the orthogonal projection of $y$ onto the column space of $X$.
 
 The residual:
 
@@ -278,7 +306,7 @@ $$
 2X^{T}X
 $$
 
-For every vector $$z$$:
+For every vector $z$:
 
 $$
 z^{T}X^{T}Xz
@@ -287,7 +315,7 @@ z^{T}X^{T}Xz
 \ge 0
 $$
 
-Therefore $$X^{T}X$$ is positive semidefinite and the objective is convex.
+Therefore $X^{T}X$ is positive semidefinite and the objective is convex.
 
 If:
 
@@ -295,7 +323,7 @@ $$
 \operatorname{rank}(X)=p
 $$
 
-then $$X^{T}X$$ is positive definite and the minimizer is unique.
+then $X^{T}X$ is positive definite and the minimizer is unique.
 
 ## Assumptions
 
@@ -381,7 +409,7 @@ $$
 O(np^2+p^3)
 $$
 
-- Can be efficient for small $$p$$.
+- Can be efficient for small $p$.
 - Less numerically stable because conditioning is squared.
 
 ### QR Decomposition
@@ -392,9 +420,9 @@ $$
 O(np^2)
 $$
 
-for $$n\ge p$$, ignoring lower-order terms.
+for $n\ge p$, ignoring lower-order terms.
 
-- More stable than explicitly forming $$X^{T}X$$
+- More stable than explicitly forming $X^{T}X$
 
 ### Singular Value Decomposition
 
@@ -479,13 +507,13 @@ Assume a dense matrix and one target.
 
 | Step | Operation | Time | Additional space |
 |---|---|---:|---:|
-| Validation | Inspect matrix and target | $$O(np)$$ | Implementation-dependent |
-| Centering | Compute means and subtract | $$O(np)$$ | $$O(p)$$ or a copied matrix |
-| Weighting | Rescale rows | $$O(np)$$ | May copy $$X$$ |
+| Validation | Inspect matrix and target | $O(np)$ | Implementation-dependent |
+| Centering | Compute means and subtract | $O(np)$ | $O(p)$ or a copied matrix |
+| Weighting | Rescale rows | $O(np)$ | May copy $X$ |
 | Factorization | QR or SVD-like dense solve | Shape-dependent | Shape-dependent |
-| Intercept recovery | Dot product and subtraction | $$O(p)$$ | $$O(1)$$ |
-| Prediction, one row | Dot product | $$O(p)$$ | $$O(1)$$ |
-| Prediction, $$m$$ rows | Matrix-vector multiply | $$O(mp)$$ | $$O(m)$$ for output |
+| Intercept recovery | Dot product and subtraction | $O(p)$ | $O(1)$ |
+| Prediction, one row | Dot product | $O(p)$ | $O(1)$ |
+| Prediction, $m$ rows | Matrix-vector multiply | $O(mp)$ | $O(m)$ for output |
 
 ## Complexity Summary
 
@@ -493,11 +521,11 @@ There is no single solver-independent training complexity.
 
 | Route | Typical dominant time | Additional notes |
 |---|---:|---|
-| Normal equations | $$O(np^2+p^3)$$ | Forms a $$p\times p$$ Gram matrix |
-| Dense QR | $$O(np^2)$$ for $$n\ge p$$ | More stable than normal equations |
-| Dense SVD | $$O(\min(np^2,n^2p))$$ | Rank revealing |
-| Sparse iterative | $$O(T\operatorname{nnz}(X))$$ | Depends on convergence |
-| Prediction, $$m$$ rows | $$O(mp)$$ | Dense model |
+| Normal equations | $O(np^2+p^3)$ | Forms a $p\times p$ Gram matrix |
+| Dense QR | $O(np^2)$ for $n\ge p$ | More stable than normal equations |
+| Dense SVD | $O(\min(np^2,n^2p))$ | Rank revealing |
+| Sparse iterative | $O(T\operatorname{nnz}(X))$ | Depends on convergence |
+| Prediction, $m$ rows | $O(mp)$ | Dense model |
 
 Input storage is:
 
@@ -524,37 +552,129 @@ For textbook OLS there may be no regularization hyperparameter. Library implemen
 
 ## Advantages
 
-- Simple and interpretable baseline.
-- Convex objective.
-- Closed-form characterization.
-- Efficient prediction.
-- Strong statistical theory.
-- Supports uncertainty estimation in statistical implementations.
+### Convex objective and global solutions
+
+The ordinary least-squares objective
+
+$$
+L(\beta)=\lVert y-X\beta\rVert_2^2
+$$
+
+has Hessian $2X^TX$, which is positive semidefinite. Every local minimum is therefore global. When $X$ has full column rank, the Hessian is positive definite and the coefficient minimizer is unique.
+
+### Transparent additive structure
+
+The prediction $\hat y=\beta_0+x^T\beta$ separates into feature contributions $x_j\beta_j$. With the feature representation fixed, $\beta_j$ describes the change in the fitted response for a one-unit change in $x_j$ while the other represented features remain fixed. This is conditional interpretation, not automatically a causal effect.
+
+### Projection geometry
+
+The fitted vector is the orthogonal projection of $y$ onto the column space of $X$. At the optimum,
+
+$$
+X^T(y-X\hat\beta)=0
+$$
+
+so the residual is orthogonal to every fitted feature direction. This geometry makes residual behavior, leverage, rank, and nested-model comparisons easier to reason about.
+
+### Strong statistical characterization
+
+Under a correct conditional-mean model with $\mathbb{E}[\varepsilon\mid X]=0$, ordinary least squares is unbiased conditional on $X$. Under homoscedastic uncorrelated errors, its covariance is
+
+$$
+\operatorname{Var}(\hat\beta\mid X)=\sigma^2(X^TX)^{-1}
+$$
+
+which supports standard errors and confidence intervals when those assumptions and the inferential design are credible.
+
+### Flexible basis representation
+
+Linearity refers to the coefficients. Polynomial terms, splines, interactions, and domain features may be included in $X$ while the optimization remains linear in $\beta$. The model can therefore express nonlinear input–response shapes without becoming a nonlinear parameter-estimation problem.
+
+### Efficient prediction and mature solvers
+
+Dense prediction for $m$ rows costs $O(mp)$ and consists mainly of a matrix–vector product. The least-squares problem can be solved with QR, SVD, or sparse iterative methods chosen for the matrix shape, rank, sparsity, and precision requirements.
+
+### Useful baseline
+
+Because the assumptions and failure modes are comparatively visible, linear regression provides a demanding reference point. A more complex model should demonstrate improvement under the same leakage-safe split, metric, and deployment constraints.
 
 ## Limitations
 
-- Linear in coefficients and basis representation.
-- Sensitive to outliers under squared loss.
-- Coefficients can be unstable under multicollinearity.
-- High-dimensional settings may require regularization.
-- Predictive fit does not imply causality.
+### Restricted conditional mean
+
+The model assumes that the conditional mean lies in the span of the supplied features:
+
+$$
+\mathbb{E}[Y\mid X]=X\beta
+$$
+
+If important curvature or interactions are absent from the basis, no solver can recover them. Adding features changes the model rather than merely improving the numerical solution.
+
+### Squared-loss sensitivity
+
+A residual $r_i$ contributes $r_i^2$ to the objective and $-2x_i r_i$ to the gradient. Its influence grows without bound as $|r_i|$ grows, so a small number of extreme responses can dominate the fit.
+
+### Ill-conditioning and coefficient variance
+
+When columns of $X$ are nearly dependent, the smallest singular value $\sigma_{\min}(X)$ approaches zero and
+
+$$
+\kappa(X)=\frac{\sigma_{\max}(X)}{\sigma_{\min}(X)}
+$$
+
+becomes large. Predictions within the observed feature subspace may remain adequate while individual coefficients become highly variable and sensitive to small perturbations.
+
+### High-dimensional nonuniqueness
+
+When $p>n$, full column rank is impossible. Many coefficient vectors can produce the same fitted values, so ordinary least squares alone does not identify a unique coefficient vector. A pseudoinverse selects a minimum-norm solution, while regularization introduces a different estimation criterion.
+
+### Inference requires extra assumptions
+
+Least-squares fitting itself does not require Gaussian errors, but familiar $t$ tests, $F$ tests, and naive standard errors rely on assumptions about dependence, variance, sampling, and model specification. Good predictive error does not validate those inferential assumptions.
+
+### Weak extrapolation guarantees
+
+Outside the observed feature support, the fitted hyperplane continues indefinitely. The algebra supplies a prediction but no evidence that the learned relationship remains stable there.
+
+### Association is not intervention
+
+The coefficient $\beta_j$ conditions on recorded features; omitted common causes, selection, measurement error, and treatment assignment can all prevent it from representing the effect of changing feature $j$.
 
 ## Failure Modes
 
-- Exact or near multicollinearity.
-- Strong nonlinear structure not captured by features.
-- Heteroscedasticity when using naive standard errors.
-- Correlated errors.
-- High-leverage influential observations.
-- Extrapolation outside the observed feature range.
-- Data leakage.
-- Distribution shift.
+### Exact rank deficiency
+
+If $\operatorname{rank}(X)<p$, $X^TX$ is singular and the coefficient solution is nonunique. Explicit inversion fails; rank-revealing QR or SVD can still return a least-squares solution, but coefficient interpretation must acknowledge nonidentifiability.
+
+### Near multicollinearity
+
+Tiny singular values amplify noise and rounding. Coefficients may change sign or magnitude across small resamples even when aggregate predictions appear stable.
+
+### Misspecified feature structure
+
+Residual curvature, interactions, saturation, thresholds, or omitted variables indicate that $X\beta$ is not an adequate conditional-mean representation. More precise optimization cannot repair model misspecification.
+
+### Heteroscedastic or dependent errors
+
+If $\operatorname{Var}(\varepsilon\mid X)\ne\sigma^2I$, naive covariance formulas are wrong. Clustered, serially correlated, or repeated-measure errors require a design-appropriate covariance estimator or model.
+
+### Influential observations
+
+A point combining large residual magnitude with high leverage can move the fitted hyperplane substantially. Residual size alone is insufficient; leverage, Cook’s distance, and sensitivity refits reveal different aspects of influence.
+
+### Target or preprocessing leakage
+
+Using future information, target-derived features, duplicate entities across splits, or full-data scaling can make held-out error unrealistically small. Leakage changes the evaluation problem, not the mathematical estimator.
+
+### Unsupported extrapolation and shift
+
+Predictions may fail when covariate support, error variance, measurement procedures, or the conditional relationship changes after training. Monitoring must distinguish input drift from conditional and label shift.
 
 ## Related Algorithms
 
-- [[Ridge Regression]] adds an $$L_2$$ penalty.
-- [[Lasso Regression]] adds an $$L_1$$ penalty.
-- [[Elastic Net]] combines $$L_1$$ and $$L_2$$ penalties.
+- [[Ridge Regression]] adds an $L_2$ penalty.
+- [[Lasso Regression]] adds an $L_1$ penalty.
+- [[Elastic Net]] combines $L_1$ and $L_2$ penalties.
 - [[Huber Regression]] reduces sensitivity to large residuals.
 - [[Logistic Regression]] is a classification model despite its name.
 - [[Bayesian Linear Regression]] places probability distributions over parameters.

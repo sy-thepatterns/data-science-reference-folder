@@ -18,27 +18,39 @@ tags:
 
 ## Definition
 
-For $$A\in\mathbb{R}^{m\times k}$$ and $$B\in\mathbb{R}^{k\times n}$$, $$C=AB$$ has $$C_{ij}=\sum_{r=1}^{k}A_{ir}B_{rj}$$.
+For $A\in\mathbb{R}^{m\times k}$ and $B\in\mathbb{R}^{k\times n}$, $C=AB$ has $C_{ij}=\sum_{r=1}^{k}A_{ir}B_{rj}$.
 
 ## Formal Statement
 
-The product represents composition of linear maps and is associative but generally not commutative. Transposition reverses order: $$(AB)^T=B^TA^T$$.
+The product represents composition of linear maps and is associative but generally not commutative. Transposition reverses order: $(AB)^T=B^TA^T$.
 
 ## Notation
 
-Symbols denote mathematical objects independently of any array class, numerical routine, library, or processor. Dimensions and assumptions should be declared where the concept is used.
+| Symbol | Meaning |
+|---|---|
+| $A,B$ | Input matrices whose inner dimensions agree. |
+| $m,k,n$ | Row, shared-inner, and column dimensions in $A\in\mathbb{R}^{m\times k}$ and $B\in\mathbb{R}^{k\times n}$. |
+| $C=AB$ | Product matrix in $\mathbb{R}^{m\times n}$. |
+| $A_{ir}$ | Entry in row $i$ and column $r$ of $A$. |
+| $B_{rj}$ | Entry in row $r$ and column $j$ of $B$. |
+| $T(m,k,n)$ | Runtime expressed as a function of the three dimensions. |
+| $O(\cdot)$ | Asymptotic growth rate, not an exact operation count. |
 
 ## Intuition
 
-Each output column is a linear combination of columns of $$A$$; each output row is a combination of rows of $$B$$.
+A matrix can be read as a machine that transforms an input vector. Multiplying two matrices means connecting two machines: the right-hand one acts first, then the left-hand one. The shared dimension is the size of the message passed between them.
 
 ## Derivation or Proof
 
-The defining identities follow from the underlying algebra or probability axioms. A full proof depends on the selected field and is separate from numerical procedures used to approximate the quantity.
+These are useful routes for checking why the main equations work:
+
+- Derive the entry formula by applying the composed linear maps to a basis vector.
+- Prove associativity $(AB)C=A(BC)$ by expanding both sides as the same finite double sum.
+- Prove $(AB)^T=B^TA^T$ by comparing entry $(i,j)$ on both sides.
 
 ## Geometric or Statistical Interpretation
 
-Each output column is a linear combination of columns of $$A$$; each output row is a combination of rows of $$B$$.
+Each output column is a linear combination of columns of $A$; each output row is a combination of rows of $B$.
 
 ## Algorithmic Form
 
@@ -46,7 +58,7 @@ There are multiple valid computational procedures. The mathematical object does 
 
 ## Computational Complexity
 
-Classical dense multiplication costs $$O(mkn)$$ time and $$O(mn)$$ output storage; actual performance depends on sparsity, layout, blocking, precision, and backend.
+Classical dense multiplication costs $O(mkn)$ time and $O(mn)$ output storage; actual performance depends on sparsity, layout, blocking, precision, and backend.
 
 ## Numerical Considerations
 

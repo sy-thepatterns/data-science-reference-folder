@@ -18,27 +18,44 @@ tags:
 
 ## Definition
 
-For $$v\in\mathbb{R}^n$$, $$\lVert v\rVert_2=\sqrt{\sum_i v_i^2}=\sqrt{v^Tv}$$.
+For $v\in\mathbb{R}^n$, $\lVert v\rVert_2=\sqrt{\sum_i v_i^2}=\sqrt{v^Tv}$.
 
 ## Formal Statement
 
-It is nonnegative, definite, homogeneous, and satisfies the triangle inequality. The induced distance is $$d(x,y)=\lVert x-y\rVert_2$$.
+It is nonnegative, definite, homogeneous, and satisfies the triangle inequality. The induced distance is $d(x,y)=\lVert x-y\rVert_2$.
 
 ## Notation
 
-Symbols denote mathematical objects independently of any array class, numerical routine, library, or processor. Dimensions and assumptions should be declared where the concept is used.
+| Symbol | Meaning |
+|---|---|
+| $v$ | Vector whose length is measured. |
+| $v_i$ | The $i$th coordinate of $v$. |
+| $n$ | Number of coordinates in $v$. |
+| $v^T$ | Transpose of $v$, written as a row vector. |
+| $\lVert v\rVert_2$ | Euclidean length of $v$. |
+| $\lVert v\rVert_2^2$ | Squared Euclidean length, equal to $v^Tv$. |
+| $Q$ | An orthogonal matrix satisfying $Q^TQ=I$. |
+| $I$ | Identity matrix. |
 
 ## Intuition
 
-It is the ordinary geometric length and is invariant under orthogonal transformations.
+Think of $v$ as directions walked along perpendicular streets: some east, some north, and perhaps more directions we cannot draw. The Euclidean norm is the straight-line distance from where you started to where you ended. Squaring each move prevents positive and negative directions from cancelling.
 
 ## Derivation or Proof
 
-The defining identities follow from the underlying algebra or probability axioms. A full proof depends on the selected field and is separate from numerical procedures used to approximate the quantity.
+These are useful routes for checking why the main equations work:
+
+- Prove $\lVert v\rVert_2^2=v^Tv$ by expanding the dot product coordinate by coordinate.
+- Prove orthogonal invariance from $\lVert Qv\rVert_2^2=v^TQ^TQv=v^Tv$.
+- Prove the triangle inequality from the Cauchy–Schwarz inequality; see [[Cauchy-Schwarz Inequality]].
 
 ## Geometric or Statistical Interpretation
 
-It is the ordinary geometric length and is invariant under orthogonal transformations.
+The norm measures straight-line distance from the origin. Rotating or reflecting the coordinate axes changes the coordinates used to describe a vector, but it does not change the vector's physical length. That is why an orthogonal transformation $Q$ preserves the norm:
+
+$$
+\lVert Qv\rVert_2=\lVert v\rVert_2
+$$
 
 ## Algorithmic Form
 
@@ -46,7 +63,7 @@ There are multiple valid computational procedures. The mathematical object does 
 
 ## Computational Complexity
 
-A dense norm costs $$O(n)$$ time and constant auxiliary storage; stable implementations use scaled sums of squares to reduce overflow and underflow.
+A dense norm costs $O(n)$ time and constant auxiliary storage; stable implementations use scaled sums of squares to reduce overflow and underflow.
 
 ## Numerical Considerations
 

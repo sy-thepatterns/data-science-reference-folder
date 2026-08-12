@@ -122,6 +122,26 @@ Application tags:
 - `speech`
 - `robotics`
 
+## Mathematical Formatting
+
+Inline mathematical notation uses one dollar sign on each side, with no space between the delimiter and the expression:
+
+```text
+$x=2$
+```
+
+Do not write `$ x=2 $`, because the vault renderer may not recognize the padded delimiters.
+
+Display equations keep double-dollar delimiters on their own lines:
+
+```text
+$$
+y=X\beta+\varepsilon
+$$
+```
+
+Use inline math for a symbol or short expression inside a sentence, list, heading, or table. Use display math when the equation should occupy its own block.
+
 ## Complexity Variables
 
 I also try to define symbols before using them. Common variables include:

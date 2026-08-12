@@ -53,6 +53,46 @@ Lasso regression is a regularized version of [[Linear Regression]] that adds an 
 
 The intercept is normally unpenalized. Feature scaling is important because rescaling a feature changes the coefficient magnitude needed to represent the same prediction.
 
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| $n$ | Number of observed examples or rows. |
+| $p$ | Number of input features or columns. |
+| $x_i$ | Feature vector for example $i$. |
+| $y_i$ | Observed target or label for example $i$. |
+| $X$ | Design matrix whose row $i$ is $x_i^T$; usually $X\in\mathbb{R}^{n\times p}$. |
+| $y$ | Vector of all observed targets. |
+| $\theta$ | Generic collection of parameters learned by a model. |
+| $\ell$ | Loss assigned to a prediction and its observed target. |
+| $\beta_0$ | Intercept: the prediction when all represented features are zero. |
+| $\beta$ | Vector of $p$ coefficients; $\beta_j$ controls feature $j$ while other represented features are held fixed. |
+| $\hat{\beta}$ | Estimated coefficient vector; a hat marks a quantity learned from data. |
+| $X\beta$ | Vector of linear predictions before adding a separate intercept. |
+| $\varepsilon$ | Unobserved error: the part of $y$ not represented by the linear mean model. |
+| $r=y-X\beta$ | Residual vector: observed values minus fitted values. |
+| $\lambda$ | Nonnegative overall penalty strength. |
+| $\lVert\beta\rVert_1$ | Sum of absolute coefficient values; the lasso penalty. |
+| $\partial$ | Subdifferential: the set of valid slopes at a nondifferentiable point. |
+| $S(z,\lambda)$ | Soft-thresholding operator, which moves $z$ toward zero and may set it exactly to zero. |
+| $s=\lVert\hat\beta\rVert_0$ | Number of fitted nonzero coefficients; $\lVert\cdot\rVert_0$ is counting notation, not a true norm. |
+| $m$ | Number of new rows predicted at once, when distinguished from the $n$ training rows. |
+| $T$ | Number of iterative optimization steps or sweeps. |
+| $\operatorname{nnz}(X)$ | Number of stored nonzero entries in a sparse matrix $X$. |
+| $O(\cdot)$ | Big-O growth rate; it describes scaling, not an exact runtime. |
+
+## Intuition
+
+Picture each coefficient attached to a rubber band pulling it toward zero. The lasso's absolute-value band has a sharp corner at zero, so weak coefficients can stick there exactly. That is why lasso can remove features rather than merely making every coefficient smaller.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Derive the coordinate update by holding all other coefficients fixed and minimizing the resulting one-variable quadratic-plus-absolute-value problem.
+- Use the subgradient optimality condition to prove the threshold rule for a zero coefficient.
+- Explain sparsity geometrically by drawing elliptical loss contours touching the corners of an $L_1$ constraint diamond.
+
 ## Formal Definition
 
 For:
@@ -249,20 +289,91 @@ when the active representation is exploited.
 
 ## Advantages
 
-- Produces sparse, potentially interpretable models.
-- Convex objective with efficient specialized solvers.
-- Useful when the feature count is large.
-- Can reduce prediction variance and storage cost.
+### Exact sparsity
 
-## Limitations and Failure Modes
+The $L_1$ penalty has a nondifferentiable corner at zero. The optimality condition permits $\hat\beta_j=0$ whenever
 
-- Biased estimates for large true coefficients.
-- Selection instability among correlated predictors.
-- Feature scaling materially affects the solution.
-- Cross-validation must include preprocessing inside each fold.
-- Exact zeros are not proof of scientific irrelevance.
-- Post-selection uncertainty is not captured by ordinary OLS formulas.
-- Squared residual loss remains sensitive to response outliers.
+$$
+\left|\frac{1}{n}x_j^T(y-X\hat\beta)\right|\le\lambda
+$$
+
+so estimation and feature selection occur in one convex objective.
+
+### High-dimensional estimation
+
+Lasso can return a sparse solution when $p>n$. The penalty restricts the effective model even though ordinary least squares is nonunique, provided the design contains enough information about the sparse signal.
+
+### Variance and storage reduction
+
+Discarding weak coordinates can lower prediction variance and reduce the cost of storing or evaluating a model from $O(p)$ toward $O(s)$, where $s=\lVert\hat\beta\rVert_0$ is the active-feature count.
+
+### Convex global objective
+
+Squared loss plus $\lambda\lVert\beta\rVert_1$ is convex. Coordinate descent, proximal gradient, and related solvers target the same global optimum, although coefficient uniqueness can still depend on the design.
+
+### Interpretable regularization path
+
+As $\lambda$ decreases, variables enter or leave the active set. The path exposes the trade-off between validation error, sparsity, and coefficient magnitude rather than hiding selection behind a single fit.
+
+### Useful when signal is sparse
+
+When a small subset of standardized features contains most predictive information, the $L_1$ inductive bias can outperform dense unregularized or ridge estimates.
+
+## Limitations
+
+### Shrinkage bias
+
+The same absolute-value penalty that creates zeros also subtracts magnitude from nonzero coefficients. Large true effects are biased toward zero, which can degrade estimation even when selected variables are correct.
+
+### Correlated-feature instability
+
+When predictors carry nearly interchangeable information, small perturbations may cause lasso to select different members of the group. Prediction can remain stable while the selected feature story changes.
+
+### Selection requires strong assumptions
+
+Recovering the true support is not guaranteed by sparsity alone. Consistent selection depends on signal strength, sample size, penalty sequence, noise, and design conditions such as restricted eigenvalue or irrepresentability assumptions.
+
+### Scale dependence
+
+Because $\lVert\beta\rVert_1$ penalizes coefficient units, features measured on larger numerical scales can be favored. Scaling rules must reflect both prediction and scientific meaning.
+
+### Limited active-set size in some settings
+
+For a generic design with $p>n$, a lasso solution commonly contains at most $n$ active predictors. This can be restrictive when the true signal is dense.
+
+### Post-selection inference is nonstandard
+
+Ordinary standard errors computed after selecting variables as if the model were prespecified ignore selection. Valid uncertainty requires selective-inference, debiasing, resampling, or an independent confirmation design.
+
+### Squared-loss sensitivity remains
+
+The residual term is still quadratic. The coefficient penalty does not bound the influence of large response residuals or high-leverage inputs.
+
+## Failure Modes
+
+### Unstable scientific conclusions
+
+Different folds or bootstrap samples may select different correlated variables. Treating one active set as a uniquely discovered mechanism overstates the evidence.
+
+### Penalty and preprocessing leakage
+
+Scaling, imputation, feature filtering, and $\lambda$ selection must occur inside each training fold. Otherwise validation labels indirectly influence the fitted representation.
+
+### Nonconvergence mistaken for sparsity
+
+A loose tolerance or insufficient coordinate sweeps can leave coefficients inaccurately zero or nonzero. Solver diagnostics such as a duality gap distinguish optimization error from the statistical solution.
+
+### Penalty convention mismatch
+
+Different constants multiplying the loss or penalty change the numerical meaning of $\lambda$. Hyperparameters cannot be transferred safely without matching objectives.
+
+### Rare-feature suppression
+
+Standardization, low prevalence, or weak marginal correlation can cause rare but important predictors to be excluded, especially when their signal appears only through interactions not included in $X$.
+
+### Outliers and shift
+
+Extreme responses can distort the selected set, while changing correlations after deployment can make the chosen sparse proxy fail even if another correlated feature remains stable.
 
 ## Diagnostics
 

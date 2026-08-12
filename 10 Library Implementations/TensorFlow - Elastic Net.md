@@ -17,6 +17,46 @@ tags:
 
 A custom differentiable implementation for [[Elastic Net]], whose defining objective is squared residual loss plus mixed L1 and L2 coefficient penalties.
 
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| $n$ | Number of observed examples or rows. |
+| $p$ | Number of input features or columns. |
+| $x_i$ | Feature vector for example $i$. |
+| $y_i$ | Observed target or label for example $i$. |
+| $X$ | Design matrix whose row $i$ is $x_i^T$; usually $X\in\mathbb{R}^{n\times p}$. |
+| $y$ | Vector of all observed targets. |
+| $\theta$ | Generic collection of parameters learned by a model. |
+| $\ell$ | Loss assigned to a prediction and its observed target. |
+| $\beta_0$ | Intercept: the prediction when all represented features are zero. |
+| $\beta$ | Vector of $p$ coefficients; $\beta_j$ controls feature $j$ while other represented features are held fixed. |
+| $\hat{\beta}$ | Estimated coefficient vector; a hat marks a quantity learned from data. |
+| $X\beta$ | Vector of linear predictions before adding a separate intercept. |
+| $\varepsilon$ | Unobserved error: the part of $y$ not represented by the linear mean model. |
+| $r=y-X\beta$ | Residual vector: observed values minus fitted values. |
+| $\lambda$ | Nonnegative overall penalty strength. |
+| $\alpha$ | Mixing fraction: $1$ gives the lasso part and $0$ gives the ridge part under this convention. |
+| $\lVert\beta\rVert_1$ | Sum of absolute coefficient values. |
+| $\lVert\beta\rVert_2^2$ | Sum of squared coefficient values. |
+| $\partial$ | Subdifferential used for the nondifferentiable absolute-value term. |
+| $m$ | Number of new rows predicted at once, when distinguished from the $n$ training rows. |
+| $T$ | Number of iterative optimization steps or sweeps. |
+| $\operatorname{nnz}(X)$ | Number of stored nonzero entries in a sparse matrix $X$. |
+| $O(\cdot)$ | Big-O growth rate; it describes scaling, not an exact runtime. |
+
+## Intuition
+
+Elastic net uses two kinds of pull on each coefficient. One can snap weak coefficients to exactly zero; the other smoothly keeps large or highly correlated coefficients from becoming unstable. The mixing value decides how much of each behaviour you want.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Recover lasso and ridge by substituting $\alpha=1$ and $\alpha=0$ into the objective.
+- Prove convexity because squared loss, the $L_1$ norm, and the squared $L_2$ norm are convex and have nonnegative weights.
+- Derive a coordinate update by combining soft thresholding with the extra quadratic shrinkage term.
+
 ## Public API
 
 ```python

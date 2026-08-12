@@ -30,6 +30,32 @@ beta, residuals, rank, singular_values = np.linalg.lstsq(
 )
 ```
 
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| $A$ | Known $m\times n$ matrix defining the linear map. |
+| $b$ | Known vector of $m$ observed values. |
+| $x$ | Unknown vector of $n$ coefficients. |
+| $x^\star$ | A coefficient vector that minimizes squared residual length. |
+| $r=b-Ax$ | Residual vector. |
+| $A^T$ | Transpose of $A$. |
+| $\lVert\cdot\rVert_2$ | Euclidean norm. |
+| $\nabla$ | Gradient with respect to the optimization variable. |
+| $I$ | Identity matrix, when used. |
+
+## Intuition
+
+When an exact solution is impossible, least squares asks for the closest reachable point. Picture all vectors $Ax$ forming a flat sheet; it drops a perpendicular from $b$ to that sheet. The landing point is the fit and the perpendicular arrow is the residual.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Use projection geometry to prove the residual at an optimum is orthogonal to every column of $A$.
+- Differentiate the squared residual norm to derive the normal equations $A^TAx=A^Tb$.
+- Use the Hessian $2A^TA$ to prove convexity and full column rank to prove uniqueness.
+
 ## Mathematical Problem
 
 The function returns a vector or matrix that minimizes:
