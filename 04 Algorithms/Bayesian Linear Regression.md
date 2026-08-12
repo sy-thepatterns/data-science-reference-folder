@@ -316,6 +316,8 @@ $$
 
 ## Advantages
 
+Bayesian advantages concern posterior and posterior-predictive distributions conditional on a model. Their quality should be assessed with calibration, coverage, proper scoring rules, prior sensitivity, and posterior predictive checks—not by the existence of a credible interval alone.
+
 ### Full parameter uncertainty
 
 Rather than returning only $\hat\beta$, Bayesian linear regression estimates $p(\beta,\sigma^2\mid X,y)$. Correlations and uncertainty among coefficients remain available for prediction and decision-making.
@@ -350,7 +352,23 @@ A posterior distribution can be combined with an explicit utility or loss to cho
 
 Conjugate Gaussian models admit analytic posteriors and predictive distributions. These provide interpretable baselines and test cases for approximate inference software.
 
+### Posterior contraction combines prior and sample information
+
+In the known-variance conjugate model, posterior precision is
+
+$$
+S_n^{-1}
+=
+S_0^{-1}
++
+\frac{1}{\sigma^2}X^TX
+$$
+
+so uncertainty shrinks most in directions that receive information from the design. Weakly observed directions remain prior-sensitive, making the source of apparent precision inspectable.
+
 ## Limitations
+
+The limitations below separate posterior uncertainty from total real-world uncertainty. A posterior can contract rapidly around the wrong value when the likelihood, prior, dependence structure, or deployment distribution is misspecified.
 
 ### Model-dependent uncertainty
 

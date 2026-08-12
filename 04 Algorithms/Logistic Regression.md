@@ -346,6 +346,8 @@ $$
 
 ## Advantages
 
+Logistic regression estimates a conditional Bernoulli distribution. Its statistical advantages should be judged through expected log loss, calibration, discrimination, coefficient sampling uncertainty, and decision risk—not accuracy alone.
+
 ### Valid probability range
 
 The logistic link maps every real score to $(0,1)$:
@@ -380,7 +382,21 @@ Regularization, basis expansions, interactions, sample weights, and multiclass g
 
 When log-odds are approximately linear, logistic regression often provides competitive discrimination and calibration with much less complexity than flexible nonlinear models.
 
+### Maximum likelihood is asymptotically efficient under specification
+
+When the logistic model is correctly specified and regularity conditions hold,
+
+$$
+\sqrt{n}(\hat\beta-\beta)
+\xrightarrow{d}
+\mathcal{N}\left(0,\mathcal{I}(\beta)^{-1}\right)
+$$
+
+where $\mathcal{I}(\beta)$ is Fisher information. This explains how sample size, class overlap, and feature geometry govern coefficient precision.
+
 ## Limitations
+
+These limitations describe violations of identifiability, conditional log-odds specification, overlap, and sampling assumptions. A numerically converged optimizer cannot repair any of them.
 
 ### Linear log-odds assumption
 
