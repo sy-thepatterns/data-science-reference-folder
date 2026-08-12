@@ -268,6 +268,8 @@ $$
 
 ## Advantages
 
+Huber regression trades Gaussian efficiency for contamination robustness. Its statistical behavior is determined by the influence function, asymptotic variance, residual scale, and contamination fraction—not simply by whether an optimizer converges.
+
 ### Bounded residual influence
 
 The Huber score satisfies
@@ -298,7 +300,13 @@ The iteratively reweighted view gives weight $w_i=\psi(u_i)/u_i$. Large standard
 
 The threshold $\delta$ controls a continuous compromise between squared-error efficiency and absolute-error robustness rather than requiring a hard decision to discard observations.
 
+### Bounded influence under response contamination
+
+For a location-like problem, the influence function is proportional to $\psi_\delta(u)$ and is bounded by $\delta$. An arbitrarily large residual therefore has bounded first-order effect on the estimate, unlike squared loss whose score grows without bound.
+
 ## Limitations
+
+The limitations below identify cases where bounded residual influence is insufficient or where the robustness–efficiency trade-off is poorly chosen. Robust loss does not make the full estimator robust to every departure from the model.
 
 ### Not robust to leverage by itself
 

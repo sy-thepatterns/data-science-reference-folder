@@ -289,6 +289,14 @@ when the active representation is exploited.
 
 ## Advantages
 
+Lasso is statistically advantageous when the target is approximately sparse in the chosen feature basis. Its risk depends on sparsity $s$, sample size $n$, ambient dimension $p$, noise, and design geometry; under suitable conditions, prediction or estimation error can scale schematically with
+
+$$
+\frac{s\log p}{n}
+$$
+
+rather than with $p/n$. This is an assumption-dependent rate, not a universal guarantee.
+
 ### Exact sparsity
 
 The $L_1$ penalty has a nondifferentiable corner at zero. The optimality condition permits $\hat\beta_j=0$ whenever
@@ -319,7 +327,13 @@ As $\lambda$ decreases, variables enter or leave the active set. The path expose
 
 When a small subset of standardized features contains most predictive information, the $L_1$ inductive bias can outperform dense unregularized or ridge estimates.
 
+### Oracle-style risk under design conditions
+
+Restricted-eigenvalue or compatibility conditions prevent distinct sparse coefficient vectors from producing nearly identical predictions. Under such conditions and an appropriate $\lambda$, lasso can approach the risk of an oracle that knew a useful sparse support in advance, up to logarithmic and constant factors.
+
 ## Limitations
+
+The same nonsmooth penalty that reduces variance and dimensionality creates bias and selection uncertainty. The limitations below concern failure of sparsity, signal-strength, and design assumptions—not merely imperfect tuning.
 
 ### Shrinkage bias
 

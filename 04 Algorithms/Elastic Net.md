@@ -227,6 +227,8 @@ or less when only active coefficients are stored and used.
 
 ## Advantages
 
+Elastic net is statistically motivated when signal is partly sparse but distributed across correlated predictors. The $L_1$ term reduces effective dimension, while the $L_2$ term lowers variance along ill-conditioned directions. Its benefit is therefore a joint bias–variance and support-stability trade-off.
+
 ### Sparsity with strict curvature
 
 Elastic net combines $L_1$ and squared $L_2$ penalties. The $L_1$ term can set coefficients to zero, while a positive $L_2$ component adds curvature and can make the coefficient solution unique even under correlated or rank-deficient designs.
@@ -251,7 +253,13 @@ Squared loss, $\lVert\beta\rVert_1$, and $\lVert\beta\rVert_2^2$ are convex. Wit
 
 Coordinate descent and warm starts efficiently trace solutions over $\lambda$ for a fixed mixing value, revealing changes in validation error and active-set size.
 
+### Correlation changes the preferred penalty mix
+
+When two standardized features have correlation near one, their separate effects are weakly identifiable. Pure lasso may select either feature with high sampling variability; adding $L_2$ curvature makes large coefficient differences costly and can reduce that selection variance, at the price of retaining more variables.
+
 ## Limitations
+
+Because elastic net estimates both sparsity and shrinkage structure from finite validation data, uncertainty comes from the fitted coefficients and from selecting $(\lambda,\alpha)$. Similar validation risks can correspond to materially different active sets.
 
 ### Two-dimensional tuning
 

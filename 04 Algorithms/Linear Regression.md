@@ -552,6 +552,19 @@ For textbook OLS there may be no regularization hyperparameter. Library implemen
 
 ## Advantages
 
+The advantages below are statistical claims about the estimator, not merely conveniences of a software implementation. For a new observation $(X_{\mathrm{new}},Y_{\mathrm{new}})$, the central quantity is expected prediction risk:
+
+$$
+R(\hat f)
+=
+\mathbb{E}
+\left[
+(Y_{\mathrm{new}}-\hat f(X_{\mathrm{new}}))^2
+\right]
+$$
+
+Least squares is attractive when its low approximation bias and exactly characterized sampling variance make this risk competitive.
+
 ### Convex objective and global solutions
 
 The ordinary least-squares objective
@@ -598,7 +611,19 @@ Dense prediction for $m$ rows costs $O(mp)$ and consists mainly of a matrix–ve
 
 Because the assumptions and failure modes are comparatively visible, linear regression provides a demanding reference point. A more complex model should demonstrate improvement under the same leakage-safe split, metric, and deployment constraints.
 
+### Finite-sample uncertainty is explicit
+
+Conditional on a full-rank fixed design with homoscedastic errors,
+
+$$
+\hat\beta\sim\mathcal{N}\left(\beta,\sigma^2(X^TX)^{-1}\right)
+$$
+
+under Gaussian noise. Even without exact normality, this formula exposes how sample size, feature spread, and collinearity control uncertainty. Wider confidence intervals are a statistical consequence of weak information, not a solver defect.
+
 ## Limitations
+
+These limitations arise when the assumptions connecting the sample estimator to the population target fail. They should be checked with residual structure, coefficient covariance, leverage, effective sample size, and out-of-sample risk rather than inferred from training fit alone.
 
 ### Restricted conditional mean
 

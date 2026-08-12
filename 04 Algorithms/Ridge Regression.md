@@ -303,6 +303,16 @@ $$
 
 ## Advantages
 
+Ridge is justified statistically through prediction risk, not because smaller coefficients are inherently better. Its advantage occurs when the variance removed by shrinkage exceeds the squared bias introduced by the penalty:
+
+$$
+\operatorname{MSE}(\hat\beta_\lambda)
+=
+\operatorname{Bias}(\hat\beta_\lambda)^2
++
+\operatorname{Var}(\hat\beta_\lambda)
+$$
+
 ### Strict convexity under positive penalization
 
 For $\lambda>0$, the Hessian is
@@ -339,7 +349,23 @@ Unlike an $L_1$ penalty, ridge usually shrinks correlated predictors together ra
 
 Ridge may be solved as a linear system, augmented least-squares problem, SVD shrinkage, or iterative optimization problem. The route can be chosen separately according to sparsity, matrix shape, and required precision.
 
+### Effective degrees of freedom are measurable
+
+For the ridge smoother $S_\lambda=X(X^TX+\lambda I)^{-1}X^T$, a common complexity measure is
+
+$$
+\operatorname{df}(\lambda)
+=
+\operatorname{tr}(S_\lambda)
+=
+\sum_j\frac{\sigma_j^2}{\sigma_j^2+\lambda}
+$$
+
+This quantifies how regularization reduces variance continuously rather than by deleting predictors.
+
 ## Limitations
+
+Every limitation below concerns a way the shrinkage assumption can be wrong, unstable, or mismeasured. The penalty changes the estimator and its estimand; it is not merely a numerical technique for solving ordinary least squares.
 
 ### No exact feature selection
 
