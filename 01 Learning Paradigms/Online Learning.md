@@ -195,5 +195,7 @@ Choosing decay, alarms, or windows after examining the complete future stream us
 
 ## References
 
-- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*.
-- Murphy, K. P. (2022). *Probabilistic Machine Learning: An Introduction*.
+1. [Shalev-Shwartz — “Online Learning and Online Convex Optimization”](https://www.cs.huji.ac.il/~shais/papers/OLsurvey.pdf). Open monograph — regret, online gradient descent, follow-the-regularized-leader, and convex losses.
+2. [Hazan — *Introduction to Online Convex Optimization*](https://arxiv.org/abs/1909.05207). Open textbook — online convex optimization, regret bounds, and adaptive methods.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.

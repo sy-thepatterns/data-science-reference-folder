@@ -715,6 +715,16 @@ Predictions may fail when covariate support, error variance, measurement procedu
 
 ## References
 
+1. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
+2. [White — heteroscedasticity-consistent covariance](https://www.stat.berkeley.edu/~stark/Teach/S240/Notes/ch6.pdf). Open course treatment — OLS covariance under heteroscedasticity and robust inference.
+3. [Cook — influence in linear regression](https://conservancy.umn.edu/bitstreams/8a9e187b-e064-4356-bc3a-9f4c2bf7f3e5/download). Open paper copy — leverage, residuals, and Cook’s distance.
+4. [scikit-learn `LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html). Package documentation — estimator API and solver routes.
+5. [statsmodels `OLS`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Package documentation — statistical fitting and results.
+6. [LAPACK — `DGEQRF`](https://www.netlib.org/lapack/explore-html/d0/da1/group__geqrf_gade26961283814bb4e62183d9133d8bf5.html). Backend documentation — blocked Householder QR, reflector storage, and workspace.
+7. [LAPACK — `DGESDD`](https://www.netlib.org/lapack/explore-html/df/d22/group__gesdd_ga8941e5ff50de36580dae8940015e9cb0.html). Backend documentation — divide-and-conquer SVD, array layout, job modes, and workspace.
+
+### Related Vault Notes
+
 - [[Linear Regression Computational Pipeline]]
 - [[Linear Regression Implementation Comparison]]
 - [[Least Squares]]

@@ -67,7 +67,7 @@ A dense norm costs $O(n)$ time and constant auxiliary storage; stable implementa
 
 ## Numerical Considerations
 
-Finite-precision results depend on conditioning, scaling, data representation, precision, and the chosen stable algorithm. Mathematical equality must not be confused with floating-point equality.
+Finite-precision results depend on **conditioning**, scaling, data representation, precision, and the chosen stable algorithm. Mathematical equality must not be confused with floating-point equality.
 
 ## Used By
 
@@ -87,5 +87,7 @@ Finite-precision results depend on conditioning, scaling, data representation, p
 
 ## References
 
-- Strang, *Introduction to Linear Algebra*, 6th ed., 2023.
-- Wasserman, *All of Statistics*, 2004.
+1. [Hefferon — *Linear Algebra*](https://hefferon.net/linearalgebra/). Open textbook — inner products, Euclidean length, orthogonality, and norm properties.
+2. [BLAS — `DNRM2`](https://www.netlib.org/lapack/explore-html/d1/d2a/group__nrm2_gab5393665c8f0e7d5de9bd1dd2ff0d9d0.html). Backend documentation — stable scaled sum-of-squares computation of the Euclidean norm.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [MIT OpenCourseWare — Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). Open course — linear algebra definitions, proofs, matrix factorizations, and applications.

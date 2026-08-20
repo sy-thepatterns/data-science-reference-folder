@@ -107,5 +107,7 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 ## References
 
-- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
-- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.
+1. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
+2. [Breiman — “Random Forests”](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf). Open paper — bagging, randomized trees, margin, and generalization.
+3. [Friedman — “Greedy Function Approximation”](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf). Open paper — gradient boosting as stagewise function optimization.
+4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

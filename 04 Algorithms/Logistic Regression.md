@@ -483,7 +483,7 @@ New categorical levels and feature combinations can make logits undefined in an 
 
 ## References
 
-- Cox, D. R. (1958). *The Regression Analysis of Binary Sequences*.
-- McCullagh, P., and Nelder, J. A. *Generalized Linear Models*.
-- Hosmer, D. W., Lemeshow, S., and Sturdivant, R. X. *Applied Logistic Regression*.
-
+1. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
+2. [Stanford CS229 notes — generalized linear models](https://cs229.stanford.edu/notes2022fall/cs229-notes1.pdf). Open course notes — Bernoulli likelihood, logistic link, gradient, Hessian, and GLMs.
+3. [scikit-learn logistic regression user guide](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression). Official documentation — regularization, solvers, multiclass handling, and numerical behavior.
+4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

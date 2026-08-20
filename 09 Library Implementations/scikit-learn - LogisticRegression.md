@@ -1,0 +1,172 @@
+---
+type: implementation
+name: scikit-learn - LogisticRegression
+algorithm:
+  - "[[Logistic Regression]]"
+library:
+  - "[[scikit-learn]]"
+status: reviewed
+tags:
+  - logistic
+  - implementation
+---
+
+# scikit-learn - LogisticRegression
+
+## Implements
+
+A native classification estimator for [[Logistic Regression]], whose defining objective is Bernoulli or multinomial negative log-likelihood, optionally regularized.
+
+## Notation
+
+| Symbol | Meaning |
+|---|---|
+| $n$ | Number of observed examples or rows. |
+| $p$ | Number of input features or columns. |
+| $x_i$ | Feature vector for example $i$. |
+| $y_i$ | Observed target or label for example $i$. |
+| $X$ | Design matrix whose row $i$ is $x_i^T$; usually $X\in\mathbb{R}^{n\times p}$. |
+| $y$ | Vector of all observed targets. |
+| $\theta$ | Generic collection of parameters learned by a model. |
+| $\ell$ | Loss assigned to a prediction and its observed target. |
+| $\beta_0$ | Intercept: the prediction when all represented features are zero. |
+| $\beta$ | Vector of $p$ coefficients; $\beta_j$ controls feature $j$ while other represented features are held fixed. |
+| $\hat{\beta}$ | Estimated coefficient vector; a hat marks a quantity learned from data. |
+| $X\beta$ | Vector of linear predictions before adding a separate intercept. |
+| $\varepsilon$ | Unobserved error: the part of $y$ not represented by the linear mean model. |
+| $r=y-X\beta$ | Residual vector: observed values minus fitted values. |
+| $z_i$ | Linear score, or logit, for example $i$. |
+| $\sigma(z)$ | Logistic function $1/(1+e^{-z})$, which turns any real score into a number between zero and one. |
+| $p_i$ | Modelled probability that $y_i=1$. |
+| $W$ | Diagonal matrix with entries $p_i(1-p_i)$ used in curvature calculations. |
+| $\tau$ | Decision threshold used to turn a probability into a class action. |
+| $L,\mathcal{L}$ | Likelihood and loss/objective, respectively; context distinguishes them. |
+| $m$ | Number of new rows predicted at once, when distinguished from the $n$ training rows. |
+| $T$ | Number of iterative optimization steps or sweeps. |
+| $\operatorname{nnz}(X)$ | Number of stored nonzero entries in a sparse matrix $X$. |
+| $O(\cdot)$ | Big-O growth rate; it describes scaling, not an exact runtime. |
+
+## Intuition
+
+Imagine a straight ruler that produces a score: moving along a feature changes that score by a fixed amount. The logistic curve bends the ruler's unlimited scores into probabilities between zero and one. A separate threshold then turns a probability into an action, so changing the threshold changes decisions without retraining the probability model.
+
+## Derivation or Proof
+
+These are useful routes for checking why the main equations work:
+
+- Derive the log-odds identity by substituting $p=1/(1+e^{-z})$ and simplifying $\log(p/(1-p))$.
+- Derive binary cross-entropy by taking the negative logarithm of the Bernoulli likelihood and using the logarithm-of-a-product rule.
+- Prove convexity by showing $X^TWX/n$ is positive semidefinite because every diagonal entry of $W$ is nonnegative.
+
+## Public API
+
+```python
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression().fit(X, y)
+```
+
+## API and Fitting Route
+
+| Property | Value |
+|---|---|
+| Primary API | `sklearn.linear_model.LogisticRegression` |
+| Fitting style | Regularized binary or multinomial optimization |
+| Core solver route | LBFGS, liblinear, Newton, SAG, or SAGA |
+| Statistical inference | Limited |
+| Sparse support | Yes, solver/input dependent |
+| GPU support | No standard route |
+
+## Objective Mapping
+
+The intended mathematical target is Bernoulli or multinomial negative log-likelihood, optionally regularized. Constants, reductions, intercept treatment, sample weighting, and regularization parameterization can differ between this route and another package.
+
+## Execution Trace
+
+```text
+Public API or custom entry point
+    ↓
+shape validation and preprocessing
+    ↓
+Regularized binary or multinomial optimization
+    ↓
+LBFGS, liblinear, Newton, SAG, or SAGA
+    ↓
+scikit-learn numerical operations and dependencies
+    ↓
+available CPU or accelerator backend
+```
+
+## Complexity Variables
+
+$$
+n=\text{number of samples}
+$$
+
+$$
+p=\text{number of features}
+$$
+
+$$
+T=\text{number of solver iterations or training passes}
+$$
+
+$$
+b=\text{mini-batch size}
+$$
+
+## Training Complexity
+
+Representative time:
+
+$$
+\text{First-order O(Tnp); Newton routes may use O(np^2 + p^3)}
+$$
+
+Representative additional or active space:
+
+$$
+\text{Solver-dependent; Hessian routes can use O(p^2)}
+$$
+
+These are route-level summaries, not universal bounds. Data shape, sparsity, active-set size, precision, convergence tolerance, line searches, batching, and linked numerical libraries can change actual cost.
+
+## Prediction Complexity
+
+For a dense fitted coefficient vector and:
+
+$$
+m=\text{number of prediction rows}
+$$
+
+prediction is dominated by a matrix-vector product:
+
+$$
+O(mp)
+$$
+
+with output storage:
+
+$$
+O(m)
+$$
+
+Sparse learned coefficients or sparse inputs can reduce arithmetic when the implementation exploits them.
+
+## Numerical and Statistical Caveats
+
+Regularization is applied by default and solver/penalty compatibility matters; this differs from unregularized textbook MLE.
+
+## Hardware and Backend
+
+GPU availability in the table refers to this route, not merely to whether some dependency can run on a GPU. Low-level kernels and hardware remain separate notes from the estimator or custom implementation.
+
+## Best Use
+
+Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Logistic Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. [scikit-learn — `LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). Package documentation — public API, objective, parameters, solver choices, attributes, and input support.
+2. [scikit-learn linear-model source](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/linear_model). Official source — estimator implementation, preprocessing, solver dispatch, sparse paths, and tests.
+3. [Pedregosa et al. — “Scikit-learn”](https://jmlr.org/papers/v12/pedregosa11a.html). Open implementation paper — API, NumPy/SciPy structures, compiled kernels, sparse inputs, and parallelism.
+4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

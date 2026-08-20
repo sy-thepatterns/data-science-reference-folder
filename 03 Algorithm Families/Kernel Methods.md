@@ -103,5 +103,7 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 ## References
 
-- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
-- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.
+1. [Schölkopf and Smola — *Learning with Kernels* resources](https://alex.smola.org/books/kernel/). Open author materials — positive-definite kernels, feature spaces, SVMs, and regularization.
+2. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Zhang et al. — *Dive into Deep Learning*](https://d2l.ai/). Open textbook — neural networks, optimization, sequence models, attention, computer vision, and implementation examples.

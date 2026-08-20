@@ -444,8 +444,7 @@ Large response errors, leverage points, and changes in feature support can still
 
 ## References
 
-- Hoerl, A. E., and Kennard, R. W. (1970). *Ridge Regression: Biased Estimation for Nonorthogonal Problems*.
-- Hastie, T., Tibshirani, R., and Friedman, J. *The Elements of Statistical Learning*.
-- [[Linear Regression]]
-- [[Least Squares]]
-
+1. [Hoerl and Kennard — ridge regression retrospective materials](https://www.math.arizona.edu/~hzhang/math574m/Read/RidgeRegression.pdf). Open paper copy — ridge estimator, bias, variance, and multicollinearity.
+2. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
+3. [scikit-learn Ridge](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html). Official documentation — objective, solvers, sparse inputs, and parameters.
+4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

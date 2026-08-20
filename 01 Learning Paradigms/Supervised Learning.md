@@ -195,5 +195,7 @@ Repeated entities, clusters, or temporal observations are not independent. Treat
 
 ## References
 
-- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*.
-- Murphy, K. P. (2022). *Probabilistic Machine Learning: An Introduction*.
+1. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
+2. [James et al. — *An Introduction to Statistical Learning*](https://www.statlearning.com/). Open textbook — accessible statistical explanations, resampling, regression, classification, trees, support vector machines, and unsupervised learning.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.

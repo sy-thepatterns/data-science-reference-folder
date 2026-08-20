@@ -81,5 +81,7 @@ Finite-precision results depend on conditioning, scaling, data representation, p
 
 ## References
 
-- Strang, *Introduction to Linear Algebra*, 6th ed., 2023.
-- Wasserman, *All of Statistics*, 2004.
+1. [Hefferon — *Linear Algebra*](https://hefferon.net/linearalgebra/). Open textbook — rank, row and column spaces, nullity, and elimination.
+2. [Golub and Van Loan — author resources](https://www.cs.cornell.edu/cv/GVL4/golubandvanloan.htm). Open author resources — numerical rank, SVD, QR, and matrix computation context.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [MIT OpenCourseWare — Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). Open course — linear algebra definitions, proofs, matrix factorizations, and applications.

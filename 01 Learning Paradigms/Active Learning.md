@@ -217,5 +217,7 @@ If each round scores $|\mathcal{U}|$ examples and retrains, acquisition work can
 
 ## References
 
-- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*.
-- Murphy, K. P. (2022). *Probabilistic Machine Learning: An Introduction*.
+1. [Settles — *Active Learning Literature Survey*](https://burrsettles.com/pub/settles.activelearning.pdf). Open survey — pool, stream, and membership-query settings; uncertainty, committee, and expected-change acquisition; evaluation and sampling bias.
+2. [Gal, Islam, and Ghahramani — “Deep Bayesian Active Learning with Image Data”](https://arxiv.org/abs/1703.02910). Open paper — Bayesian uncertainty acquisition and BALD.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.

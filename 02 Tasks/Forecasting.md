@@ -127,5 +127,7 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 ## References
 
-- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
-- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.
+1. [Hyndman and Athanasopoulos — *Forecasting: Principles and Practice*](https://otexts.com/fpp3/). Open textbook — forecast design, time-series cross-validation, statistical models, accuracy, and probabilistic forecasts.
+2. [Gneiting and Katzfuss — “Probabilistic Forecasting”](https://www.stat.washington.edu/raftery/Research/PDF/Gneiting2014.pdf). Open review — calibration, sharpness, scoring rules, and predictive distributions.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

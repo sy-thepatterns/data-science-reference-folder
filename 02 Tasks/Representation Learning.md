@@ -120,5 +120,7 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 ## References
 
-- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
-- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.
+1. [Bengio, Courville, and Vincent — “Representation Learning: A Review”](https://arxiv.org/abs/1206.5538). Open review — representation objectives, disentanglement, deep learning, and transfer.
+2. [Zhang et al. — *Dive into Deep Learning*](https://d2l.ai/). Open textbook — neural networks, optimization, sequence models, attention, computer vision, and implementation examples.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

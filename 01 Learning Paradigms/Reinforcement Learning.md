@@ -192,5 +192,7 @@ If the recorded state is not Markov, $P(s_{t+1}\mid s_t,a_t)$ omits relevant his
 
 ## References
 
-- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*.
-- Murphy, K. P. (2022). *Probabilistic Machine Learning: An Introduction*.
+1. [Sutton and Barto — *Reinforcement Learning: An Introduction*](http://incompleteideas.net/book/the-book-2nd.html). Open textbook — Markov decision processes, value functions, temporal-difference learning, policy gradients, and planning.
+2. [Levine — CS 285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/). Open course — deep RL algorithms, offline RL, model-based methods, and evaluation.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.

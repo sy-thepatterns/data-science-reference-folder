@@ -82,5 +82,7 @@ Finite-precision results depend on conditioning, scaling, data representation, p
 
 ## References
 
-- Strang, *Introduction to Linear Algebra*, 6th ed., 2023.
-- Wasserman, *All of Statistics*, 2004.
+1. [Hefferon — *Linear Algebra*](https://hefferon.net/linearalgebra/). Open textbook — linear-map composition and matrix products.
+2. [BLAS — Level 3 routines](https://www.netlib.org/blas/#_level_3). Open reference — standard matrix–matrix operations and low-level interfaces.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [MIT OpenCourseWare — Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). Open course — linear algebra definitions, proofs, matrix factorizations, and applications.

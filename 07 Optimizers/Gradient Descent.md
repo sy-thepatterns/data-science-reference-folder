@@ -47,3 +47,10 @@ An iterative method that moves opposite the objective gradient.
 ## Complexity
 
 ## Related Notes
+
+## References
+
+1. [Ruder — “An Overview of Gradient Descent Optimization Algorithms”](https://arxiv.org/abs/1609.04747). Open survey — batch, stochastic, momentum, and adaptive gradient methods.
+2. [Boyd and Vandenberghe — *Convex Optimization*](https://web.stanford.edu/~boyd/cvxbook/). Open textbook — first-order methods, convexity, convergence, and step sizes.
+3. [Zhang et al. — *Dive into Deep Learning*](https://d2l.ai/). Open textbook — neural networks, optimization, sequence models, attention, computer vision, and implementation examples.
+4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

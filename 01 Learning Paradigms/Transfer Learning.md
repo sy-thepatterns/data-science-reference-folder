@@ -177,5 +177,7 @@ A pretrained model incorporates far more data and compute than a scratch baselin
 
 ## References
 
-- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*.
-- Murphy, K. P. (2022). *Probabilistic Machine Learning: An Introduction*.
+1. [Zhuang et al. — “A Comprehensive Survey on Transfer Learning”](https://arxiv.org/abs/1911.02685). Open survey — domain adaptation, parameter transfer, feature transfer, and negative transfer.
+2. [Pan and Yang — “A Survey on Transfer Learning”](https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf). Open paper — formal source/target taxonomy and transfer settings.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.

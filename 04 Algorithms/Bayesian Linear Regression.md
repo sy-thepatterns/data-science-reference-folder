@@ -451,7 +451,7 @@ Posterior uncertainty generally describes uncertainty under the training distrib
 
 ## References
 
-- Lindley, D. V., and Smith, A. F. M. (1972). *Bayes Estimates for the Linear Model*.
-- Gelman, A. et al. *Bayesian Data Analysis*.
-- Bishop, C. M. *Pattern Recognition and Machine Learning*.
-
+1. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+2. [Lindley and Smith — “Bayes Estimates for the Linear Model”](https://www.stat.cmu.edu/~brian/463-663/week11/bayeslin.pdf). Open paper copy — conjugate Bayesian linear models and hierarchical structure.
+3. [Stan linear regression example](https://mc-stan.org/docs/stan-users-guide/regression.html). Open documentation — likelihood, priors, posterior computation, and generated quantities.
+4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

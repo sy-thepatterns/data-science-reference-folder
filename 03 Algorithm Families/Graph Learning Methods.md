@@ -101,5 +101,7 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 ## References
 
-- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
-- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.
+1. [Hamilton — *Graph Representation Learning*](https://www.cs.mcgill.ca/~wlh/grl_book/). Open textbook — graph embeddings, message passing, GNNs, and graph tasks.
+2. [Kipf and Welling — “Semi-Supervised Classification with Graph Convolutional Networks”](https://arxiv.org/abs/1609.02907). Open paper — GCN propagation and graph semi-supervision.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

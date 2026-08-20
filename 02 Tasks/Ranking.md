@@ -118,5 +118,7 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 ## References
 
-- Hastie, Tibshirani, and Friedman, *The Elements of Statistical Learning*, 2009.
-- Murphy, *Probabilistic Machine Learning: An Introduction*, 2022.
+1. [Liu — *Learning to Rank for Information Retrieval* tutorial](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2009-92.pdf). Open monograph — pointwise, pairwise, and listwise ranking; evaluation metrics.
+2. [Burges et al. — “Learning to Rank using Gradient Descent”](https://www.microsoft.com/en-us/research/wp-content/uploads/2005/08/icml_ranking.pdf). Open paper — RankNet pairwise loss and gradient training.
+3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
+4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
