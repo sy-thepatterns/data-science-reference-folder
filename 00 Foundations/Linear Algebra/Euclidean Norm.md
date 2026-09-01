@@ -26,16 +26,16 @@ It is nonnegative, definite, homogeneous, and satisfies the triangle inequality.
 
 ## Notation
 
-| Symbol | Meaning |
-|---|---|
-| $v$ | Vector whose length is measured. |
-| $v_i$ | The $i$th coordinate of $v$. |
-| $n$ | Number of coordinates in $v$. |
-| $v^T$ | Transpose of $v$, written as a row vector. |
-| $\lVert v\rVert_2$ | Euclidean length of $v$. |
+| Symbol               | Meaning                                    |
+| -------------------- | ------------------------------------------ |
+| $v$                  | Vector whose length is measured.           |
+| $v_i$                | The $i$th coordinate of $v$.               |
+| $n$                  | Number of coordinates in $v$.              |
+| $v^T$                | Transpose of $v$, written as a row vector. |
+| $\lVert v\rVert_2$   | Euclidean length of $v$.                   |
 | $\lVert v\rVert_2^2$ | Squared Euclidean length, equal to $v^Tv$. |
-| $Q$ | An orthogonal matrix satisfying $Q^TQ=I$. |
-| $I$ | Identity matrix. |
+| $Q$                  | An orthogonal matrix satisfying $Q^TQ=I$.  |
+| $I$                  | Identity matrix.                           |
 
 ## Intuition
 
