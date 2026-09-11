@@ -7,11 +7,7 @@ tags:
 ---
 website is here! https://sy-thepatterns.com/library
 
-# Machine Learning & Deep Learning Reference
-
-## Intuition
-
-I have attempted to organize routes between ideas while keeping mathematical models, objectives, solvers, software, backends, and hardware as separate layers.
+Hello! I am a humble student who has attempted to organize routes between ideas while having mathematical models, objectives, solvers, software, backends, and hardware as separate layers.
 
 This vault is a connected technical reference for tracing machine learning and deep learning methods through the entire stack:
 
