@@ -165,12 +165,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Bayesian Linear Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [PyTorch — `torch.nn.Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Package documentation — affine layer, shapes, parameters, initialization, dtypes, and devices.
-2. [PyTorch optimizers](https://docs.pytorch.org/docs/stable/optim.html). Solver documentation — gradient-based optimizers, parameter groups, hooks, and implementation options.
-3. [Paszke et al. — “PyTorch”](https://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library). Open implementation paper — tensor system, autograd, dispatch, accelerators, and distributed architecture.
-4. [PyTorch DistributedDataParallel](https://docs.pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html). Parallelization documentation — gradient synchronization, process topology, and distributed data-parallel execution.
-5. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-6. [Lindley and Smith — “Bayes Estimates for the Linear Model”](https://www.stat.cmu.edu/~brian/463-663/week11/bayeslin.pdf). Open paper copy — conjugate Bayesian linear models and hierarchical structure.

@@ -227,10 +227,3 @@ $$
 Use this implementation for prediction-oriented tabular workflows, pipelines, preprocessing integration, cross-validation, and the broader scikit-learn estimator API.
 
 For extensive coefficient inference, hypothesis tests, and regression diagnostics, compare [[statsmodels - OLS]].
-
-## References
-
-1. [scikit-learn — `LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html). Package documentation — public API, objective, parameters, solver choices, attributes, and input support.
-2. [scikit-learn linear-model source](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/linear_model). Official source — estimator implementation, preprocessing, solver dispatch, sparse paths, and tests.
-3. [Pedregosa et al. — “Scikit-learn”](https://jmlr.org/papers/v12/pedregosa11a.html). Open implementation paper — API, NumPy/SciPy structures, compiled kernels, sparse inputs, and parallelism.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

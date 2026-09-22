@@ -321,14 +321,3 @@ From code to theory:
 [[Least Squares]]
     ↑ depends on
 [[Euclidean Norm]]
-
-## References
-
-1. [scikit-learn `LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html). Official documentation — prediction-oriented estimator and solver branches.
-2. [statsmodels `OLS`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Official documentation — statistical model and inference.
-3. [NumPy `lstsq`](https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html). Official documentation — direct dense least squares.
-4. [SciPy `lstsq`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.lstsq.html). Official documentation — selectable LAPACK least-squares drivers.
-5. [PyTorch `Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Official documentation — differentiable affine layer.
-6. [TensorFlow `Dense`](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense). Official documentation — differentiable affine layer.
-7. [LAPACK — `DGEQRF`](https://www.netlib.org/lapack/explore-html/d0/da1/group__geqrf_gade26961283814bb4e62183d9133d8bf5.html). Backend documentation — blocked Householder QR, reflector storage, and workspace.
-8. [LAPACK — `DGESDD`](https://www.netlib.org/lapack/explore-html/df/d22/group__gesdd_ga8941e5ff50de36580dae8940015e9cb0.html). Backend documentation — divide-and-conquer SVD, array layout, job modes, and workspace.

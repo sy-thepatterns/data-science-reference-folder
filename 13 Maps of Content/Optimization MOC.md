@@ -41,10 +41,3 @@ A map of content is like a subway map for the vault: it shows useful routes betw
 
 - [[BLAS]]
 - [[LAPACK]]
-
-## References
-
-1. [Boyd and Vandenberghe — *Convex Optimization*](https://web.stanford.edu/~boyd/cvxbook/). Open textbook — convex sets, objectives, duality, algorithms, and applications.
-2. [Ruder — “An Overview of Gradient Descent Optimization Algorithms”](https://arxiv.org/abs/1609.04747). Open survey — batch, stochastic, momentum, and adaptive gradient methods.
-3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

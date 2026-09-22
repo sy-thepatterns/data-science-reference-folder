@@ -102,10 +102,3 @@ and aggregating the numerator and denominator costs:
 $$
 O(n)
 $$
-
-## References
-
-1. [scikit-learn — R² score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html). Official documentation — definition, negative scores, constant targets, weighting, and multioutput behavior.
-2. [James et al. — *An Introduction to Statistical Learning*](https://www.statlearning.com/). Open textbook — accessible statistical explanations, resampling, regression, classification, trees, support vector machines, and unsupervised learning.
-3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

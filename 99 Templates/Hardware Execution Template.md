@@ -44,5 +44,3 @@ Hardware
 ## Bottlenecks
 
 ## Related Hardware or Backends
-
-## References

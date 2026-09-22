@@ -163,11 +163,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Logistic Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [statsmodels — `Logit`](https://www.statsmodels.org/stable/generated/statsmodels.discrete.discrete_model.Logit.html). Package documentation — model construction, fitting interface, parameters, and result objects.
-2. [statsmodels linear-model source](https://github.com/statsmodels/statsmodels/tree/main/statsmodels). Official source — model implementation, covariance estimators, optimization, diagnostics, and tests.
-3. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
-5. [Stanford CS229 notes — generalized linear models](https://cs229.stanford.edu/notes2022fall/cs229-notes1.pdf). Open course notes — Bernoulli likelihood, logistic link, gradient, Hessian, and GLMs.

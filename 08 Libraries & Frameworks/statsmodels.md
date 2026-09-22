@@ -34,10 +34,3 @@ Statistical modelling, estimation, diagnostics, and inference.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
-
-## References
-
-1. [statsmodels documentation](https://www.statsmodels.org/stable/). Official documentation — statistical models, inference, diagnostics, time series, and APIs.
-2. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-3. [statsmodels source](https://github.com/statsmodels/statsmodels). Official source — models, covariance estimators, diagnostics, and numerical implementation.
-4. [SciPy Lecture Notes](https://scipy-lectures.org/). Open course notes — NumPy arrays, SciPy numerical routines, visualization, and scientific Python workflows.

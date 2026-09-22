@@ -34,10 +34,3 @@ Tensor computation, automatic differentiation, and neural-network training.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
-
-## References
-
-1. [PyTorch documentation](https://docs.pytorch.org/docs/stable/). Official documentation — tensors, autograd, neural modules, optimizers, devices, and distributed execution.
-2. [Paszke et al. — “PyTorch”](https://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library). Open implementation paper — tensor system, autograd, dispatch, accelerators, and distributed architecture.
-3. [PyTorch source](https://github.com/pytorch/pytorch). Official source — ATen, autograd, CPU/CUDA kernels, distributed code, and tests.
-4. [SciPy Lecture Notes](https://scipy-lectures.org/). Open course notes — NumPy arrays, SciPy numerical routines, visualization, and scientific Python workflows.

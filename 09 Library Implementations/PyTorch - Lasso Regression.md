@@ -161,12 +161,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Lasso Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [PyTorch — `torch.nn.Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Package documentation — affine layer, shapes, parameters, initialization, dtypes, and devices.
-2. [PyTorch optimizers](https://docs.pytorch.org/docs/stable/optim.html). Solver documentation — gradient-based optimizers, parameter groups, hooks, and implementation options.
-3. [Paszke et al. — “PyTorch”](https://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library). Open implementation paper — tensor system, autograd, dispatch, accelerators, and distributed architecture.
-4. [PyTorch DistributedDataParallel](https://docs.pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html). Parallelization documentation — gradient synchronization, process topology, and distributed data-parallel execution.
-5. [Tibshirani — “Regression Shrinkage and Selection via the Lasso”](https://statweb.stanford.edu/~tibs/lasso/lasso.pdf). Open paper — L1 penalty, sparsity, constrained and penalized forms.
-6. [Friedman, Hastie, and Tibshirani — coordinate descent](https://www.jstatsoft.org/article/view/v033i01). Open paper — solver, regularization paths, sparse data, and convergence.

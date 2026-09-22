@@ -115,10 +115,3 @@ Therefore forming $X^{T}X$ may amplify conditioning problems.
 ## Use
 
 Useful for derivation and sometimes efficient when $p$ is small and the matrix is well-conditioned. It is not the safest default for rank-deficient or ill-conditioned data.
-
-## References
-
-1. [Stanford EE263 — Least Squares](https://web.stanford.edu/~boyd/ee263/lectures/least-squares.pdf). Open lecture notes — normal-equation derivation and projection geometry.
-2. [LAPACK — `DPOSV`](https://www.netlib.org/lapack/explore-html/d8/d2f/group__posv_ga2f793563a7fd5f3af4e1ed6a0c6d2d7e.html). Backend documentation — Cholesky solution of positive-definite systems, storage, and workspace.
-3. [Higham — numerical stability resources](https://nhigham.com/accuracy-and-stability-of-numerical-algorithms/). Open author resources — conditioning, backward error, and stable numerical algorithms.
-4. [MIT OpenCourseWare — Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/). Open course — floating-point arithmetic, conditioning, linear systems, least squares, and matrix factorizations.

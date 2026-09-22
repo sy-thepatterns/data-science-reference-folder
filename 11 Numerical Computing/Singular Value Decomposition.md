@@ -107,10 +107,3 @@ for the dominant factorization work.
 
 - Usually more computationally expensive than a basic QR solve.
 - Can require substantial workspace.
-
-## References
-
-1. [Golub and Reinsch — “Singular Value Decomposition and Least Squares Solutions”](https://doi.org/10.1007/BF02163027). Foundational numerical paper — bidiagonalization, SVD, and least-squares solutions.
-2. [LAPACK — `DGESDD`](https://www.netlib.org/lapack/explore-html/df/d22/group__gesdd_ga8941e5ff50de36580dae8940015e9cb0.html). Backend documentation — divide-and-conquer SVD, array layout, job modes, and workspace.
-3. [LAPACK — `DGELSD`](https://www.netlib.org/lapack/explore-html/d9/d67/group__gelsd_ga0bee7e1b9e7e43f59ecf2419b2759c42.html). Solver documentation — SVD least squares, numerical rank, and minimum-norm solutions.
-4. [MIT OpenCourseWare — Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/). Open course — floating-point arithmetic, conditioning, linear systems, least squares, and matrix factorizations.

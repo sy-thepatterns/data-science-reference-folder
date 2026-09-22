@@ -161,12 +161,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [PyTorch — `torch.nn.Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Package documentation — affine layer, shapes, parameters, initialization, dtypes, and devices.
-2. [PyTorch optimizers](https://docs.pytorch.org/docs/stable/optim.html). Solver documentation — gradient-based optimizers, parameter groups, hooks, and implementation options.
-3. [Paszke et al. — “PyTorch”](https://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library). Open implementation paper — tensor system, autograd, dispatch, accelerators, and distributed architecture.
-4. [PyTorch DistributedDataParallel](https://docs.pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html). Parallelization documentation — gradient synchronization, process topology, and distributed data-parallel execution.
-5. [Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”](https://hastie.su.domains/Papers/elasticnet.pdf). Open paper — mixed penalty, grouping effect, convexity, and statistical properties.
-6. [Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”](https://www.jstatsoft.org/article/view/v033i01). Open paper — coordinate descent, pathwise optimization, sparse matrices, and complexity.

@@ -133,12 +133,3 @@ O\left(T\operatorname{nnz}(X)\right)
 $$
 
 The constants, memory, precision, convergence, and numerical robustness differ substantially.
-
-## References
-
-1. [scikit-learn `LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html). Official documentation — prediction-oriented estimator and solver branches.
-2. [statsmodels `OLS`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Official documentation — statistical model and inference.
-3. [NumPy `lstsq`](https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html). Official documentation — direct dense least squares.
-4. [SciPy `lstsq`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.lstsq.html). Official documentation — selectable LAPACK least-squares drivers.
-5. [PyTorch `Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Official documentation — differentiable affine layer.
-6. [TensorFlow `Dense`](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense). Official documentation — differentiable affine layer.

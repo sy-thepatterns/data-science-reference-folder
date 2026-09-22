@@ -165,11 +165,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [statsmodels — `RLM with HuberT`](https://www.statsmodels.org/stable/generated/statsmodels.robust.robust_linear_model.RLM.html). Package documentation — model construction, fitting interface, parameters, and result objects.
-2. [statsmodels linear-model source](https://github.com/statsmodels/statsmodels/tree/main/statsmodels). Official source — model implementation, covariance estimators, optimization, diagnostics, and tests.
-3. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-4. [Huber — “Robust Estimation of a Location Parameter”](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-35/issue-1/Robust-Estimation-of-a-Location-Parameter/10.1214/aoms/1177703732.full). Open paper — Huber loss, contamination neighborhoods, influence, and asymptotic variance.
-5. [statsmodels robust linear models](https://www.statsmodels.org/stable/rlm.html). Official documentation — M-estimation, robust norms, scale estimators, and IRLS.

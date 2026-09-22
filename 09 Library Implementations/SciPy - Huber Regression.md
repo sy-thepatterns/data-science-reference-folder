@@ -164,11 +164,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [SciPy optimization documentation](https://docs.scipy.org/doc/scipy/reference/optimize.html). Package documentation — minimization, least squares, constrained optimization, and solver options.
-2. [SciPy linear algebra documentation](https://docs.scipy.org/doc/scipy/reference/linalg.html). Solver documentation — dense solves, least squares, decompositions, and LAPACK wrappers.
-3. [Virtanen et al. — “SciPy 1.0”](https://www.nature.com/articles/s41592-019-0686-2.pdf). Open implementation paper — architecture, compiled routines, sparse structures, governance, and testing.
-4. [Huber — “Robust Estimation of a Location Parameter”](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-35/issue-1/Robust-Estimation-of-a-Location-Parameter/10.1214/aoms/1177703732.full). Open paper — Huber loss, contamination neighborhoods, influence, and asymptotic variance.
-5. [statsmodels robust linear models](https://www.statsmodels.org/stable/rlm.html). Official documentation — M-estimation, robust norms, scale estimators, and IRLS.

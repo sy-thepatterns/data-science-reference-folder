@@ -166,11 +166,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Bayesian Linear Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [SciPy optimization documentation](https://docs.scipy.org/doc/scipy/reference/optimize.html). Package documentation — minimization, least squares, constrained optimization, and solver options.
-2. [SciPy linear algebra documentation](https://docs.scipy.org/doc/scipy/reference/linalg.html). Solver documentation — dense solves, least squares, decompositions, and LAPACK wrappers.
-3. [Virtanen et al. — “SciPy 1.0”](https://www.nature.com/articles/s41592-019-0686-2.pdf). Open implementation paper — architecture, compiled routines, sparse structures, governance, and testing.
-4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-5. [Lindley and Smith — “Bayes Estimates for the Linear Model”](https://www.stat.cmu.edu/~brian/463-663/week11/bayeslin.pdf). Open paper copy — conjugate Bayesian linear models and hierarchical structure.

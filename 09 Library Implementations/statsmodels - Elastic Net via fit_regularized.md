@@ -161,11 +161,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [statsmodels — `Elastic Net via fit_regularized`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Package documentation — model construction, fitting interface, parameters, and result objects.
-2. [statsmodels linear-model source](https://github.com/statsmodels/statsmodels/tree/main/statsmodels). Official source — model implementation, covariance estimators, optimization, diagnostics, and tests.
-3. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-4. [Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”](https://hastie.su.domains/Papers/elasticnet.pdf). Open paper — mixed penalty, grouping effect, convexity, and statistical properties.
-5. [Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”](https://www.jstatsoft.org/article/view/v033i01). Open paper — coordinate descent, pathwise optimization, sparse matrices, and complexity.

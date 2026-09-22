@@ -163,12 +163,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Logistic Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [PyTorch — `torch.nn.Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Package documentation — affine layer, shapes, parameters, initialization, dtypes, and devices.
-2. [PyTorch optimizers](https://docs.pytorch.org/docs/stable/optim.html). Solver documentation — gradient-based optimizers, parameter groups, hooks, and implementation options.
-3. [Paszke et al. — “PyTorch”](https://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library). Open implementation paper — tensor system, autograd, dispatch, accelerators, and distributed architecture.
-4. [PyTorch DistributedDataParallel](https://docs.pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html). Parallelization documentation — gradient synchronization, process topology, and distributed data-parallel execution.
-5. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
-6. [Stanford CS229 notes — generalized linear models](https://cs229.stanford.edu/notes2022fall/cs229-notes1.pdf). Open course notes — Bernoulli likelihood, logistic link, gradient, Hessian, and GLMs.

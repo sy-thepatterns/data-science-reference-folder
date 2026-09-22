@@ -162,11 +162,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [scikit-learn — `ElasticNet`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html). Package documentation — public API, objective, parameters, solver choices, attributes, and input support.
-2. [scikit-learn linear-model source](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/linear_model). Official source — estimator implementation, preprocessing, solver dispatch, sparse paths, and tests.
-3. [Pedregosa et al. — “Scikit-learn”](https://jmlr.org/papers/v12/pedregosa11a.html). Open implementation paper — API, NumPy/SciPy structures, compiled kernels, sparse inputs, and parallelism.
-4. [Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”](https://hastie.su.domains/Papers/elasticnet.pdf). Open paper — mixed penalty, grouping effect, convexity, and statistical properties.
-5. [Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”](https://www.jstatsoft.org/article/view/v033i01). Open paper — coordinate descent, pathwise optimization, sparse matrices, and complexity.

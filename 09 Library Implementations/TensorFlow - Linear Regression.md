@@ -115,10 +115,3 @@ With mini-batches, the total arithmetic per complete pass remains of the same or
 ## Difference from Direct OLS
 
 This is an iterative optimization approach. It is appropriate when integration with TensorFlow models, automatic differentiation, streaming batches, or accelerators matters more than obtaining a direct dense least-squares solution.
-
-## References
-
-1. [TensorFlow — `tf.keras.layers.Dense`](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense). Package documentation — affine layer, tensor shapes, initializers, regularizers, and activation.
-2. [TensorFlow Keras optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers). Solver documentation — gradient optimizers, schedules, clipping, accumulation, and serialization.
-3. [Abadi et al. — “TensorFlow”](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/abadi). Open implementation paper — dataflow graphs, device placement, distributed execution, and kernels.
-4. [TensorFlow distributed training](https://www.tensorflow.org/guide/distributed_training). Parallelization documentation — mirrored, multi-worker, parameter-server, and accelerator strategies.

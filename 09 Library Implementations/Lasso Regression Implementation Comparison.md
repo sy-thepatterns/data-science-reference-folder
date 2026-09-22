@@ -120,15 +120,3 @@ additional matrix storage. Bayesian posterior covariance, Newton Hessians, coord
 - Choose TensorFlow when Keras integration, TensorFlow deployment, or accelerator execution is central.
 
 Package choice does not change the mathematical identity of [[Lasso Regression]], but objective conventions and available inference can change the fitted result.
-
-## References
-
-1. [scikit-learn — `Lasso`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html). Package documentation — public API, objective, parameters, solver choices, attributes, and input support.
-2. [scikit-learn linear-model source](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/linear_model). Official source — estimator implementation, preprocessing, solver dispatch, sparse paths, and tests.
-3. [Pedregosa et al. — “Scikit-learn”](https://jmlr.org/papers/v12/pedregosa11a.html). Open implementation paper — API, NumPy/SciPy structures, compiled kernels, sparse inputs, and parallelism.
-4. [Tibshirani — “Regression Shrinkage and Selection via the Lasso”](https://statweb.stanford.edu/~tibs/lasso/lasso.pdf). Open paper — L1 penalty, sparsity, constrained and penalized forms.
-5. [Friedman, Hastie, and Tibshirani — coordinate descent](https://www.jstatsoft.org/article/view/v033i01). Open paper — solver, regularization paths, sparse data, and convergence.
-6. [PyTorch — `torch.nn.Linear`](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html). Package documentation — affine layer, shapes, parameters, initialization, dtypes, and devices.
-7. [PyTorch optimizers](https://docs.pytorch.org/docs/stable/optim.html). Solver documentation — gradient-based optimizers, parameter groups, hooks, and implementation options.
-8. [TensorFlow — `tf.keras.layers.Dense`](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense). Package documentation — affine layer, tensor shapes, initializers, regularizers, and activation.
-9. [TensorFlow Keras optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers). Solver documentation — gradient optimizers, schedules, clipping, accumulation, and serialization.

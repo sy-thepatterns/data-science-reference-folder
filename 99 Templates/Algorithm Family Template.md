@@ -40,5 +40,3 @@ tags: []
 |---|---|---|---:|---:|---|
 
 ## Related Families
-
-## References

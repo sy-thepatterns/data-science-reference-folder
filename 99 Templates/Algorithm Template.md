@@ -185,15 +185,3 @@ OUTPUT:
 ## Implementations
 
 ## Applications
-
-## References
-
-### Original or Foundational Paper
-
-### Official Documentation
-
-### Source Code
-
-### Textbooks
-
-### Reference Articles

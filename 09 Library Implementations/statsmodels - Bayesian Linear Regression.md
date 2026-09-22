@@ -166,11 +166,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Bayesian Linear Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [statsmodels — `Bayesian Linear Regression`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Package documentation — model construction, fitting interface, parameters, and result objects.
-2. [statsmodels linear-model source](https://github.com/statsmodels/statsmodels/tree/main/statsmodels). Official source — model implementation, covariance estimators, optimization, diagnostics, and tests.
-3. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-5. [Lindley and Smith — “Bayes Estimates for the Linear Model”](https://www.stat.cmu.edu/~brian/463-663/week11/bayeslin.pdf). Open paper copy — conjugate Bayesian linear models and hierarchical structure.

@@ -106,10 +106,3 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Neural Networks]]
 - [[Probabilistic Models]]
-
-## References
-
-1. [Sutton and Barto — *Reinforcement Learning: An Introduction*](http://incompleteideas.net/book/the-book-2nd.html). Open textbook — value-based, policy-based, actor–critic, and model-based methods.
-2. [OpenAI Spinning Up in Deep RL](https://spinningup.openai.com/en/latest/). Open educational documentation — policy gradients, actor–critic methods, implementations, and equations.
-3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

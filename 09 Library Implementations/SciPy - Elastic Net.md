@@ -161,11 +161,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [SciPy optimization documentation](https://docs.scipy.org/doc/scipy/reference/optimize.html). Package documentation — minimization, least squares, constrained optimization, and solver options.
-2. [SciPy linear algebra documentation](https://docs.scipy.org/doc/scipy/reference/linalg.html). Solver documentation — dense solves, least squares, decompositions, and LAPACK wrappers.
-3. [Virtanen et al. — “SciPy 1.0”](https://www.nature.com/articles/s41592-019-0686-2.pdf). Open implementation paper — architecture, compiled routines, sparse structures, governance, and testing.
-4. [Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”](https://hastie.su.domains/Papers/elasticnet.pdf). Open paper — mixed penalty, grouping effect, convexity, and statistical properties.
-5. [Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”](https://www.jstatsoft.org/article/view/v033i01). Open paper — coordinate descent, pathwise optimization, sparse matrices, and complexity.

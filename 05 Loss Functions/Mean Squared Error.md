@@ -143,10 +143,3 @@ O(1)
 $$
 
 additional working space when accumulated as a stream.
-
-## References
-
-1. [scikit-learn — mean squared error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html). Official documentation — definition, weighting, multioutput behavior, and API.
-2. [James et al. — *An Introduction to Statistical Learning*](https://www.statlearning.com/). Open textbook — accessible statistical explanations, resampling, regression, classification, trees, support vector machines, and unsupervised learning.
-3. [Gneiting and Raftery — “Strictly Proper Scoring Rules”](https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf). Open paper — proper scoring rules, squared error, and predictive evaluation.
-4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

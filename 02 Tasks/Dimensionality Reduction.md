@@ -117,10 +117,3 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Representation Learning]]
 - [[Clustering]]
-
-## References
-
-1. [Jolliffe and Cadima — “Principal Component Analysis: A Review”](https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2015.0202). Open review — PCA definition, variance maximization, reconstruction, and interpretation.
-2. [van der Maaten, Postma, and van den Herik — “Dimensionality Reduction: A Comparative Review”](https://lvdmaaten.github.io/publications/papers/TR_Dimensionality_Reduction_Review_2009.pdf). Open review — linear and nonlinear dimensionality-reduction methods.
-3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

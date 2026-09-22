@@ -47,5 +47,3 @@ tags: []
 ## Related Metrics
 
 ## Implementations
-
-## References

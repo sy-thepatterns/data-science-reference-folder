@@ -81,10 +81,3 @@ $$
 $$
 
 is a least-squares solution. When multiple solutions exist, it is the minimum-norm solution.
-
-## References
-
-1. [Penrose — “A Generalized Inverse for Matrices”](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0305004100030401). Foundational paper — four Penrose equations and uniqueness.
-2. [SciPy — `pinv`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.pinv.html). Package documentation — SVD construction, rank thresholds, and batched arrays.
-3. [NumPy — `pinv`](https://numpy.org/doc/stable/reference/generated/numpy.linalg.pinv.html). Package documentation — SVD computation, Hermitian path, and stacked matrices.
-4. [MIT OpenCourseWare — Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/). Open course — floating-point arithmetic, conditioning, linear systems, least squares, and matrix factorizations.

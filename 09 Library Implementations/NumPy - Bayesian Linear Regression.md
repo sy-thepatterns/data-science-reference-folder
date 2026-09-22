@@ -166,11 +166,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Bayesian Linear Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [NumPy linear algebra documentation](https://numpy.org/doc/stable/reference/routines.linalg.html). Package documentation — array-based linear algebra, solves, least squares, SVD, and pseudoinverses.
-2. [NumPy source — `numpy.linalg`](https://github.com/numpy/numpy/tree/main/numpy/linalg). Official source — Python wrappers, gufunc dispatch, LAPACK calls, dtypes, and result shaping.
-3. [Harris et al. — “Array Programming with NumPy”](https://www.nature.com/articles/s41586-020-2649-2.pdf). Open implementation paper — array model, vectorization, interoperability, compiled kernels, and ecosystem.
-4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-5. [Lindley and Smith — “Bayes Estimates for the Linear Model”](https://www.stat.cmu.edu/~brian/463-663/week11/bayeslin.pdf). Open paper copy — conjugate Bayesian linear models and hierarchical structure.

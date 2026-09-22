@@ -34,5 +34,3 @@ tags: []
 ## Documentation
 
 ## Repository
-
-## References

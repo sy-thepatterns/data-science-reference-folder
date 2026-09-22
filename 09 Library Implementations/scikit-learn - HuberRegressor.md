@@ -165,11 +165,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [scikit-learn — `HuberRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html). Package documentation — public API, objective, parameters, solver choices, attributes, and input support.
-2. [scikit-learn linear-model source](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/linear_model). Official source — estimator implementation, preprocessing, solver dispatch, sparse paths, and tests.
-3. [Pedregosa et al. — “Scikit-learn”](https://jmlr.org/papers/v12/pedregosa11a.html). Open implementation paper — API, NumPy/SciPy structures, compiled kernels, sparse inputs, and parallelism.
-4. [Huber — “Robust Estimation of a Location Parameter”](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-35/issue-1/Robust-Estimation-of-a-Location-Parameter/10.1214/aoms/1177703732.full). Open paper — Huber loss, contamination neighborhoods, influence, and asymptotic variance.
-5. [statsmodels robust linear models](https://www.statsmodels.org/stable/rlm.html). Official documentation — M-estimation, robust norms, scale estimators, and IRLS.

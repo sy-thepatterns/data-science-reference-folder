@@ -111,10 +111,3 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Probabilistic Models]]
 - [[Linear Models]]
-
-## References
-
-1. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-2. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.
-3. [Stan User’s Guide](https://mc-stan.org/docs/stan-users-guide/). Open documentation — Bayesian modelling, posterior computation, diagnostics, and predictive checks.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

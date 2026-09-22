@@ -117,10 +117,3 @@ The coefficient solve has dense least-squares complexity. Additional inferential
 ## Best Use
 
 Use this implementation when inferential outputs and diagnostics are central. Use [[scikit-learn - LinearRegression]] when estimator pipelines and prediction workflows are central.
-
-## References
-
-1. [statsmodels — `OLS`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Package documentation — model construction, fitting interface, parameters, and result objects.
-2. [statsmodels linear-model source](https://github.com/statsmodels/statsmodels/tree/main/statsmodels). Official source — model implementation, covariance estimators, optimization, diagnostics, and tests.
-3. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

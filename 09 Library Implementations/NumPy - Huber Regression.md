@@ -164,11 +164,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [NumPy linear algebra documentation](https://numpy.org/doc/stable/reference/routines.linalg.html). Package documentation — array-based linear algebra, solves, least squares, SVD, and pseudoinverses.
-2. [NumPy source — `numpy.linalg`](https://github.com/numpy/numpy/tree/main/numpy/linalg). Official source — Python wrappers, gufunc dispatch, LAPACK calls, dtypes, and result shaping.
-3. [Harris et al. — “Array Programming with NumPy”](https://www.nature.com/articles/s41586-020-2649-2.pdf). Open implementation paper — array model, vectorization, interoperability, compiled kernels, and ecosystem.
-4. [Huber — “Robust Estimation of a Location Parameter”](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-35/issue-1/Robust-Estimation-of-a-Location-Parameter/10.1214/aoms/1177703732.full). Open paper — Huber loss, contamination neighborhoods, influence, and asymptotic variance.
-5. [statsmodels robust linear models](https://www.statsmodels.org/stable/rlm.html). Official documentation — M-estimation, robust norms, scale estimators, and IRLS.

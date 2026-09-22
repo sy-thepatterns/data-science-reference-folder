@@ -34,10 +34,3 @@ Dense linear-equation, least-squares, eigenvalue, and factorization routines.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
-
-## References
-
-1. [LAPACK Users’ Guide](https://www.netlib.org/lapack/lug/). Official open guide — drivers, computational routines, storage, workspace, errors, and performance.
-2. [LAPACK source and generated documentation](https://www.netlib.org/lapack/explore-html/). Official source documentation — routine-level algorithms, arguments, call graphs, and source.
-3. [LAPACK GitHub repository](https://github.com/Reference-LAPACK/lapack). Official source — Fortran implementation, tests, C interfaces, and build system.
-4. [SciPy Lecture Notes](https://scipy-lectures.org/). Open course notes — NumPy arrays, SciPy numerical routines, visualization, and scientific Python workflows.

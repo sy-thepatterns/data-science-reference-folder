@@ -96,10 +96,3 @@ QR avoids explicitly forming $X^{T}X$ and is generally more stable than the norm
 ## Rank-Revealing Variant
 
 Column-pivoted QR can help detect rank deficiency and improve robustness.
-
-## References
-
-1. [Householder — “Unitary Triangularization”](https://doi.org/10.1145/320941.320947). Foundational paper — reflection-based triangularization.
-2. [LAPACK — `DGEQRF`](https://www.netlib.org/lapack/explore-html/d0/da1/group__geqrf_gade26961283814bb4e62183d9133d8bf5.html). Backend documentation — blocked Householder QR, reflector storage, and workspace.
-3. [Demmel et al. — communication-optimal QR](https://people.eecs.berkeley.edu/~demmel/CommunicationAvoidingAlgorithms.html). Open author resources — parallel QR, data movement, and communication-avoiding factorizations.
-4. [MIT OpenCourseWare — Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/). Open course — floating-point arithmetic, conditioning, linear systems, least squares, and matrix factorizations.

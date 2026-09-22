@@ -161,11 +161,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Lasso Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [statsmodels — `Lasso via fit_regularized`](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html). Package documentation — model construction, fitting interface, parameters, and result objects.
-2. [statsmodels linear-model source](https://github.com/statsmodels/statsmodels/tree/main/statsmodels). Official source — model implementation, covariance estimators, optimization, diagnostics, and tests.
-3. [Seabold and Perktold — “Statsmodels”](https://conference.scipy.org/proceedings/scipy2010/seabold.html). Open implementation paper — model/results architecture, NumPy/SciPy integration, and statistical testing.
-4. [Tibshirani — “Regression Shrinkage and Selection via the Lasso”](https://statweb.stanford.edu/~tibs/lasso/lasso.pdf). Open paper — L1 penalty, sparsity, constrained and penalized forms.
-5. [Friedman, Hastie, and Tibshirani — coordinate descent](https://www.jstatsoft.org/article/view/v033i01). Open paper — solver, regularization paths, sparse data, and convergence.

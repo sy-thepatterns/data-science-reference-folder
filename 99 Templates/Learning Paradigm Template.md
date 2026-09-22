@@ -32,5 +32,3 @@ tags: []
 ## Limitations
 
 ## Related Paradigms
-
-## References

@@ -34,10 +34,3 @@ Scientific-computing algorithms including dense and sparse linear algebra.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
-
-## References
-
-1. [SciPy documentation](https://docs.scipy.org/doc/scipy/). Official documentation — optimization, sparse arrays, linear algebra, statistics, and scientific routines.
-2. [Virtanen et al. — “SciPy 1.0”](https://www.nature.com/articles/s41592-019-0686-2.pdf). Open implementation paper — architecture, compiled routines, sparse structures, governance, and testing.
-3. [SciPy source](https://github.com/scipy/scipy). Official source — Python, C, C++, and Fortran implementations and tests.
-4. [SciPy Lecture Notes](https://scipy-lectures.org/). Open course notes — NumPy arrays, SciPy numerical routines, visualization, and scientific Python workflows.

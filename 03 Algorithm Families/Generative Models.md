@@ -106,10 +106,3 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Probabilistic Models]]
 - [[Neural Networks]]
-
-## References
-
-1. [Murphy — *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html). Open textbook — Bayesian inference, generative models, representation learning, sequential models, and advanced approximation methods.
-2. [Kingma and Welling — “Auto-Encoding Variational Bayes”](https://arxiv.org/abs/1312.6114). Open paper — variational autoencoders and reparameterized inference.
-3. [Ho, Jain, and Abbeel — “Denoising Diffusion Probabilistic Models”](https://arxiv.org/abs/2006.11239). Open paper — diffusion objectives and sampling.
-4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

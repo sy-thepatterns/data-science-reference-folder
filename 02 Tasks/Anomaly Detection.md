@@ -117,10 +117,3 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Classification]]
 - [[Density Estimation]]
-
-## References
-
-1. [Chandola, Banerjee, and Kumar — “Anomaly Detection: A Survey”](https://www.vs.inf.ethz.ch/edu/HS2010/CPS/papers/chandola09_anomaly-detection-survey.pdf). Open survey — point, contextual, and collective anomalies; supervised, semi-supervised, and unsupervised methods.
-2. [PyOD documentation](https://pyod.readthedocs.io/). Open documentation — algorithm taxonomy, APIs, benchmarks, and evaluation examples.
-3. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.

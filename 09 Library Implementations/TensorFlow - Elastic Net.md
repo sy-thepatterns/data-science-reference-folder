@@ -161,12 +161,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [TensorFlow — `tf.keras.layers.Dense`](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense). Package documentation — affine layer, tensor shapes, initializers, regularizers, and activation.
-2. [TensorFlow Keras optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers). Solver documentation — gradient optimizers, schedules, clipping, accumulation, and serialization.
-3. [Abadi et al. — “TensorFlow”](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/abadi). Open implementation paper — dataflow graphs, device placement, distributed execution, and kernels.
-4. [TensorFlow distributed training](https://www.tensorflow.org/guide/distributed_training). Parallelization documentation — mirrored, multi-worker, parameter-server, and accelerator strategies.
-5. [Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”](https://hastie.su.domains/Papers/elasticnet.pdf). Open paper — mixed penalty, grouping effect, convexity, and statistical properties.
-6. [Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”](https://www.jstatsoft.org/article/view/v033i01). Open paper — coordinate descent, pathwise optimization, sparse matrices, and complexity.

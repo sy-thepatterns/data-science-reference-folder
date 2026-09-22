@@ -34,10 +34,3 @@ Standard low-level vector and matrix operations.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
-
-## References
-
-1. [Netlib BLAS](https://www.netlib.org/blas/). Official reference — Level 1, 2, and 3 interfaces and reference implementations.
-2. [BLAS Technical Forum Standard](https://www.netlib.org/blas/blast-forum/). Open standard — routine semantics, data types, storage, and extended BLAS interfaces.
-3. [OpenBLAS documentation](https://www.openmathlib.org/OpenBLAS/docs/). Open implementation documentation — optimized kernels, threading, architecture dispatch, and build configuration.
-4. [SciPy Lecture Notes](https://scipy-lectures.org/). Open course notes — NumPy arrays, SciPy numerical routines, visualization, and scientific Python workflows.

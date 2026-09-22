@@ -106,10 +106,3 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Ensemble Methods]]
 - [[Nearest-Neighbour Methods]]
-
-## References
-
-1. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
-2. [Breiman et al. — *Classification and Regression Trees* overview](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm). Open author materials — tree induction and ensemble context.
-3. [Chen and Guestrin — “XGBoost”](https://arxiv.org/abs/1603.02754). Open paper — regularized boosting, sparse-aware split finding, and parallel system design.
-4. [Murphy — *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html). Open textbook — probability, statistics, supervised learning, optimization, linear algebra, and probabilistic modelling.

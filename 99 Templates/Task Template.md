@@ -36,5 +36,3 @@ tags: []
 ## Failure Modes
 
 ## Related Tasks
-
-## References

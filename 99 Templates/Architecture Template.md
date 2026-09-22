@@ -66,5 +66,3 @@ Output
 ## Implementations
 
 ## Original Paper
-
-## References

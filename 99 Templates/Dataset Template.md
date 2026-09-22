@@ -45,5 +45,3 @@ tags: []
 ## Known Limitations
 
 ## Ethical and Representational Considerations
-
-## References

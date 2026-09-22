@@ -162,11 +162,3 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Logistic Regression Implementation Comparison]] before treating package choice as interchangeable.
-
-## References
-
-1. [SciPy optimization documentation](https://docs.scipy.org/doc/scipy/reference/optimize.html). Package documentation — minimization, least squares, constrained optimization, and solver options.
-2. [SciPy linear algebra documentation](https://docs.scipy.org/doc/scipy/reference/linalg.html). Solver documentation — dense solves, least squares, decompositions, and LAPACK wrappers.
-3. [Virtanen et al. — “SciPy 1.0”](https://www.nature.com/articles/s41592-019-0686-2.pdf). Open implementation paper — architecture, compiled routines, sparse structures, governance, and testing.
-4. [Hastie, Tibshirani, and Friedman — *The Elements of Statistical Learning*](https://hastie.su.domains/Papers/ESLII.pdf). Open textbook — statistical learning theory, supervised and unsupervised methods, regularization, kernels, trees, ensembles, and model assessment.
-5. [Stanford CS229 notes — generalized linear models](https://cs229.stanford.edu/notes2022fall/cs229-notes1.pdf). Open course notes — Bernoulli likelihood, logistic link, gradient, Hessian, and GLMs.
