@@ -34,3 +34,10 @@ Machine-learning estimators and preprocessing tools.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. scikit-learn User Guide
+2. Pedregosa et al. — “Scikit-learn”
+3. scikit-learn source
+4. SciPy Lecture Notes

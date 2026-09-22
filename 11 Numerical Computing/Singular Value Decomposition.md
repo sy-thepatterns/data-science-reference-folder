@@ -107,3 +107,10 @@ for the dominant factorization work.
 
 - Usually more computationally expensive than a basic QR solve.
 - Can require substantial workspace.
+
+## References
+
+1. Golub and Reinsch — “Singular Value Decomposition and Least Squares Solutions”
+2. LAPACK — DGESDD
+3. LAPACK — DGELSD
+4. MIT OpenCourseWare — Numerical Methods

@@ -161,3 +161,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Lasso Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. NumPy linear algebra documentation
+2. NumPy source — numpy.linalg
+3. Harris et al. — “Array Programming with NumPy”
+4. Tibshirani — “Regression Shrinkage and Selection via the Lasso”
+5. Friedman, Hastie, and Tibshirani — coordinate descent

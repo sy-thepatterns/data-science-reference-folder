@@ -117,3 +117,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Representation Learning]]
 - [[Clustering]]
+
+## References
+
+1. Jolliffe and Cadima — “Principal Component Analysis: A Review”
+2. van der Maaten, Postma, and van den Herik — “Dimensionality Reduction: A Comparative Review”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

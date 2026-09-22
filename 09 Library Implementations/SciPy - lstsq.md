@@ -126,3 +126,10 @@ and driver workspace may be substantial.
 ## Use
 
 Use `scipy.linalg.lstsq` when direct control over dense least-squares drivers and diagnostic outputs is useful.
+
+## References
+
+1. SciPy optimization documentation
+2. SciPy linear algebra documentation
+3. Virtanen et al. — “SciPy 1.0”
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

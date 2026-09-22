@@ -321,3 +321,14 @@ From code to theory:
 [[Least Squares]]
     ↑ depends on
 [[Euclidean Norm]]
+
+## References
+
+1. scikit-learn LinearRegression
+2. statsmodels OLS
+3. NumPy lstsq
+4. SciPy lstsq
+5. PyTorch Linear
+6. TensorFlow Dense
+7. LAPACK — DGEQRF
+8. LAPACK — DGESDD

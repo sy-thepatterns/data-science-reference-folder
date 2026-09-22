@@ -118,3 +118,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Ranking]]
 - [[Forecasting]]
 - [[Representation Learning]]
+
+## References
+
+1. Aggarwal — Recommender Systems supplementary materials
+2. Koren, Bell, and Volinsky — “Matrix Factorization Techniques for Recommender Systems”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

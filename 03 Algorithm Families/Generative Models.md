@@ -106,3 +106,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Probabilistic Models]]
 - [[Neural Networks]]
+
+## References
+
+1. Murphy — Probabilistic Machine Learning: Advanced Topics
+2. Kingma and Welling — “Auto-Encoding Variational Bayes”
+3. Ho, Jain, and Abbeel — “Denoising Diffusion Probabilistic Models”
+4. Murphy — Probabilistic Machine Learning: An Introduction

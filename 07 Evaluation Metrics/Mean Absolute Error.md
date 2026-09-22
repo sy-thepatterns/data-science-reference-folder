@@ -47,3 +47,10 @@ For every prediction, measure how far it missed without caring whether it was to
 Computing MAE from existing predictions takes $O(n)$ time and $O(1)$ additional streaming storage.
 
 ## Related Notes
+
+## References
+
+1. scikit-learn — mean absolute error
+2. Hyndman and Koehler — “Another Look at Measures of Forecast Accuracy”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. James et al. — An Introduction to Statistical Learning

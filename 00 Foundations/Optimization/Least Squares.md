@@ -81,3 +81,10 @@ Finite-precision results depend on conditioning, scaling, data representation, p
 - [[Linear Algebra]]
 - [[Probability]]
 - [[Numerical Stability]]
+
+## References
+
+1. Stanford EE263 — Least Squares
+2. LAPACK Users’ Guide — least-squares problems
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. MIT OpenCourseWare — Linear Algebra

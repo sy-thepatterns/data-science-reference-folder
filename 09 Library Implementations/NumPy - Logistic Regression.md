@@ -163,3 +163,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Logistic Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. NumPy linear algebra documentation
+2. NumPy source — numpy.linalg
+3. Harris et al. — “Array Programming with NumPy”
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+5. Stanford CS229 notes — generalized linear models

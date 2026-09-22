@@ -34,3 +34,10 @@ Tensor computation, graph execution, automatic differentiation, and accelerator 
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. TensorFlow API documentation
+2. Abadi et al. — “TensorFlow”
+3. TensorFlow source
+4. SciPy Lecture Notes

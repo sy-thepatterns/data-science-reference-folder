@@ -164,3 +164,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. NumPy linear algebra documentation
+2. NumPy source — numpy.linalg
+3. Harris et al. — “Array Programming with NumPy”
+4. Huber — “Robust Estimation of a Location Parameter”
+5. statsmodels robust linear models

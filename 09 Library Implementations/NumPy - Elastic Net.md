@@ -161,3 +161,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. NumPy linear algebra documentation
+2. NumPy source — numpy.linalg
+3. Harris et al. — “Array Programming with NumPy”
+4. Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”
+5. Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”

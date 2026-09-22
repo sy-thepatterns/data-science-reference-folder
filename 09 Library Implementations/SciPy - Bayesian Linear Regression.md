@@ -166,3 +166,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Bayesian Linear Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. SciPy optimization documentation
+2. SciPy linear algebra documentation
+3. Virtanen et al. — “SciPy 1.0”
+4. Murphy — Probabilistic Machine Learning: An Introduction
+5. Lindley and Smith — “Bayes Estimates for the Linear Model”

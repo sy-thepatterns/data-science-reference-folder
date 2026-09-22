@@ -108,3 +108,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 - [[Kernel Methods]]
 - [[Probabilistic Models]]
 - [[Bayesian Methods]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. James et al. — An Introduction to Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Zhang et al. — Dive into Deep Learning

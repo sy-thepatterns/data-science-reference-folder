@@ -161,3 +161,12 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Elastic Net Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. TensorFlow — tf.keras.layers.Dense
+2. TensorFlow Keras optimizers
+3. Abadi et al. — “TensorFlow”
+4. TensorFlow distributed training
+5. Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”
+6. Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”

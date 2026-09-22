@@ -115,3 +115,10 @@ Therefore forming $X^{T}X$ may amplify conditioning problems.
 ## Use
 
 Useful for derivation and sometimes efficient when $p$ is small and the matrix is well-conditioned. It is not the safest default for rank-deficient or ill-conditioned data.
+
+## References
+
+1. Stanford EE263 — Least Squares
+2. LAPACK — DPOSV
+3. Higham — numerical stability resources
+4. MIT OpenCourseWare — Numerical Methods

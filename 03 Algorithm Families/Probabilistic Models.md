@@ -106,3 +106,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Bayesian Methods]]
 - [[Generative Models]]
+
+## References
+
+1. Murphy — Probabilistic Machine Learning: An Introduction
+2. Murphy — Probabilistic Machine Learning: Advanced Topics
+3. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+4. Zhang et al. — Dive into Deep Learning

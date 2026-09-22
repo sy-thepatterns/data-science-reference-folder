@@ -143,3 +143,10 @@ O(1)
 $$
 
 additional working space when accumulated as a stream.
+
+## References
+
+1. scikit-learn — mean squared error
+2. James et al. — An Introduction to Statistical Learning
+3. Gneiting and Raftery — “Strictly Proper Scoring Rules”
+4. Murphy — Probabilistic Machine Learning: An Introduction

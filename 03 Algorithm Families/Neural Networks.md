@@ -104,3 +104,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 - [[Generative Models]]
 - [[Graph Learning Methods]]
 - [[Linear Models]]
+
+## References
+
+1. Zhang et al. — Dive into Deep Learning
+2. Goodfellow, Bengio, and Courville — Deep Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

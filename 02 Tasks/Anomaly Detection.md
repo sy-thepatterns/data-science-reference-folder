@@ -117,3 +117,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Classification]]
 - [[Density Estimation]]
+
+## References
+
+1. Chandola, Banerjee, and Kumar — “Anomaly Detection: A Survey”
+2. PyOD documentation
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

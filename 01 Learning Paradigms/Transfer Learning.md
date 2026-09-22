@@ -174,3 +174,10 @@ A pretrained model incorporates far more data and compute than a scratch baselin
 - [[Meta-Learning]]
 - [[Self-Supervised Learning]]
 - [[Supervised Learning]]
+
+## References
+
+1. Zhuang et al. — “A Comprehensive Survey on Transfer Learning”
+2. Pan and Yang — “A Survey on Transfer Learning”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

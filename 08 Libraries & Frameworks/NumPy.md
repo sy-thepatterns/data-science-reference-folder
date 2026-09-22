@@ -34,3 +34,10 @@ Core multidimensional arrays and numerical operations.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. NumPy documentation
+2. Harris et al. — “Array Programming with NumPy”
+3. NumPy source
+4. SciPy Lecture Notes

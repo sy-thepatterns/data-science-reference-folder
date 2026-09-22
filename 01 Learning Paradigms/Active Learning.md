@@ -214,3 +214,10 @@ If each round scores $|\mathcal{U}|$ examples and retrains, acquisition work can
 - [[Supervised Learning]]
 - [[Online Learning]]
 - [[Semi-Supervised Learning]]
+
+## References
+
+1. Settles — Active Learning Literature Survey
+2. Gal, Islam, and Ghahramani — “Deep Bayesian Active Learning with Image Data”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

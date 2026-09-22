@@ -111,3 +111,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Probabilistic Models]]
 - [[Linear Models]]
+
+## References
+
+1. Murphy — Probabilistic Machine Learning: An Introduction
+2. Murphy — Probabilistic Machine Learning: Advanced Topics
+3. Stan User’s Guide
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

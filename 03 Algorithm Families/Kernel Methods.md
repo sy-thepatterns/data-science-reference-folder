@@ -100,3 +100,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Linear Models]]
 - [[Nearest-Neighbour Methods]]
+
+## References
+
+1. Schölkopf and Smola — Learning with Kernels resources
+2. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Zhang et al. — Dive into Deep Learning

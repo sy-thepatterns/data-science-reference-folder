@@ -124,3 +124,15 @@ additional matrix storage. Bayesian posterior covariance, Newton Hessians, coord
 - Choose TensorFlow when Keras integration, TensorFlow deployment, or accelerator execution is central.
 
 Package choice does not change the mathematical identity of [[Bayesian Linear Regression]], but objective conventions and available inference can change the fitted result.
+
+## References
+
+1. scikit-learn — BayesianRidge
+2. scikit-learn linear-model source
+3. Pedregosa et al. — “Scikit-learn”
+4. Murphy — Probabilistic Machine Learning: An Introduction
+5. Lindley and Smith — “Bayes Estimates for the Linear Model”
+6. PyTorch — torch.nn.Linear
+7. PyTorch optimizers
+8. TensorFlow — tf.keras.layers.Dense
+9. TensorFlow Keras optimizers

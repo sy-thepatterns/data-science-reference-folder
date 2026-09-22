@@ -120,3 +120,15 @@ additional matrix storage. Bayesian posterior covariance, Newton Hessians, coord
 - Choose TensorFlow when Keras integration, TensorFlow deployment, or accelerator execution is central.
 
 Package choice does not change the mathematical identity of [[Elastic Net]], but objective conventions and available inference can change the fitted result.
+
+## References
+
+1. scikit-learn — ElasticNet
+2. scikit-learn linear-model source
+3. Pedregosa et al. — “Scikit-learn”
+4. Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”
+5. Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”
+6. PyTorch — torch.nn.Linear
+7. PyTorch optimizers
+8. TensorFlow — tf.keras.layers.Dense
+9. TensorFlow Keras optimizers

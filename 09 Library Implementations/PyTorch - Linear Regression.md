@@ -180,3 +180,10 @@ for batch size $b$, excluding framework overhead.
 - May not reach the exact least-squares solution in finite training.
 - Naturally supports GPUs, mini-batches, custom losses, and larger neural architectures.
 - Useful when linear regression is embedded in a differentiable model.
+
+## References
+
+1. PyTorch — torch.nn.Linear
+2. PyTorch optimizers
+3. Paszke et al. — “PyTorch”
+4. PyTorch DistributedDataParallel

@@ -116,3 +116,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Density Estimation]]
 - [[Dimensionality Reduction]]
 - [[Anomaly Detection]]
+
+## References
+
+1. von Luxburg — “A Tutorial on Spectral Clustering”
+2. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. James et al. — An Introduction to Statistical Learning

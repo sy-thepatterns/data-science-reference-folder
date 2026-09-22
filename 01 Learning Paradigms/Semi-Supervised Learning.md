@@ -170,3 +170,10 @@ The weight $\lambda$, confidence threshold, teacher decay, and augmentation stre
 - [[Supervised Learning]]
 - [[Unsupervised Learning]]
 - [[Self-Supervised Learning]]
+
+## References
+
+1. Zhu — Semi-Supervised Learning Literature Survey
+2. Sohn et al. — “FixMatch”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

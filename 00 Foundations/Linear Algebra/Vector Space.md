@@ -82,3 +82,10 @@ Finite-precision results depend on conditioning, scaling, data representation, p
 - [[Linear Algebra]]
 - [[Probability]]
 - [[Numerical Stability]]
+
+## References
+
+1. Hefferon — Linear Algebra
+2. MIT OpenCourseWare — Linear Algebra
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Boyd and Vandenberghe — Introduction to Applied Linear Algebra

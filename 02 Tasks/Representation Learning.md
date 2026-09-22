@@ -117,3 +117,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Dimensionality Reduction]]
 - [[Generative Modelling]]
+
+## References
+
+1. Bengio, Courville, and Vincent — “Representation Learning: A Review”
+2. Zhang et al. — Dive into Deep Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

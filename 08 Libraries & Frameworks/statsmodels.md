@@ -34,3 +34,10 @@ Statistical modelling, estimation, diagnostics, and inference.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. statsmodels documentation
+2. Seabold and Perktold — “Statsmodels”
+3. statsmodels source
+4. SciPy Lecture Notes

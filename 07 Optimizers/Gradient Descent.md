@@ -47,3 +47,10 @@ An iterative method that moves opposite the objective gradient.
 ## Complexity
 
 ## Related Notes
+
+## References
+
+1. Ruder — “An Overview of Gradient Descent Optimization Algorithms”
+2. Boyd and Vandenberghe — Convex Optimization
+3. Zhang et al. — Dive into Deep Learning
+4. Murphy — Probabilistic Machine Learning: An Introduction

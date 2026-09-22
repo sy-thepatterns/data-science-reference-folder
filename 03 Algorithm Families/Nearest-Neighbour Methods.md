@@ -96,3 +96,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Kernel Methods]]
 - [[Clustering]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. Cover and Hart — “Nearest Neighbor Pattern Classification”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Zhang et al. — Dive into Deep Learning

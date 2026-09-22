@@ -49,3 +49,10 @@ RMSE is like measuring a typical miss, but large misses receive extra attention 
 Computing RMSE from existing predictions takes $O(n)$ time and $O(1)$ additional streaming storage.
 
 ## Related Notes
+
+## References
+
+1. scikit-learn — root mean squared error
+2. Hyndman and Koehler — forecast accuracy measures
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. James et al. — An Introduction to Statistical Learning

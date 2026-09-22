@@ -34,3 +34,10 @@ Dense linear-equation, least-squares, eigenvalue, and factorization routines.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. LAPACK Users’ Guide
+2. LAPACK source and generated documentation
+3. LAPACK GitHub repository
+4. SciPy Lecture Notes

@@ -34,3 +34,10 @@ Tensor computation, automatic differentiation, and neural-network training.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. PyTorch documentation
+2. Paszke et al. — “PyTorch”
+3. PyTorch source
+4. SciPy Lecture Notes

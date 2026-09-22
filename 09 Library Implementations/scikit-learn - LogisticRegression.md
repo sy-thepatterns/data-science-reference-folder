@@ -163,3 +163,10 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Logistic Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. scikit-learn — LogisticRegression
+2. scikit-learn linear-model source
+3. Pedregosa et al. — “Scikit-learn”
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

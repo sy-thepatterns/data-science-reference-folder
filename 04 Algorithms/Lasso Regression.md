@@ -412,3 +412,10 @@ Extreme responses can distort the selected set, while changing correlations afte
 - [[PyTorch - Lasso Regression]]
 - [[TensorFlow - Lasso Regression]]
 - [[Lasso Regression Implementation Comparison]]
+
+## References
+
+1. Tibshirani — “Regression Shrinkage and Selection via the Lasso”
+2. Friedman, Hastie, and Tibshirani — coordinate descent
+3. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+4. Murphy — Probabilistic Machine Learning: An Introduction

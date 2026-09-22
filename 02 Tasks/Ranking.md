@@ -115,3 +115,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Classification]]
 - [[Recommendation]]
+
+## References
+
+1. Liu — Learning to Rank for Information Retrieval tutorial
+2. Burges et al. — “Learning to Rank using Gradient Descent”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

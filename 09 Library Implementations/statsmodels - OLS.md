@@ -117,3 +117,10 @@ The coefficient solve has dense least-squares complexity. Additional inferential
 ## Best Use
 
 Use this implementation when inferential outputs and diagnostics are central. Use [[scikit-learn - LinearRegression]] when estimator pipelines and prediction workflows are central.
+
+## References
+
+1. statsmodels — OLS
+2. statsmodels linear-model source
+3. Seabold and Perktold — “Statsmodels”
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

@@ -334,3 +334,10 @@ Extreme residuals can alter both selection and shrinkage. Changes in feature cor
 - [[PyTorch - Elastic Net]]
 - [[TensorFlow - Elastic Net]]
 - [[Elastic Net Implementation Comparison]]
+
+## References
+
+1. Zou and Hastie — “Regularization and Variable Selection via the Elastic Net”
+2. Friedman, Hastie, and Tibshirani — “Regularization Paths for GLMs via Coordinate Descent”
+3. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+4. Murphy — Probabilistic Machine Learning: An Introduction

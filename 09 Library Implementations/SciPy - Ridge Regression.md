@@ -162,3 +162,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Ridge Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. SciPy optimization documentation
+2. SciPy linear algebra documentation
+3. Virtanen et al. — “SciPy 1.0”
+4. Hoerl and Kennard — ridge regression retrospective materials
+5. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

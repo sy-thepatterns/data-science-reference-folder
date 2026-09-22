@@ -124,3 +124,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Regression]]
 - [[Time-Series Modelling]]
 - [[Sequence Modelling]]
+
+## References
+
+1. Hyndman and Athanasopoulos — Forecasting: Principles and Practice
+2. Gneiting and Katzfuss — “Probabilistic Forecasting”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

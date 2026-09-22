@@ -53,3 +53,10 @@ Iterative gradient-based linear regression can run on a GPU through tensor frame
 - Memory bandwidth
 - Precision requirements
 - Insufficient parallel work
+
+## References
+
+1. NVIDIA CUDA C++ Programming Guide
+2. PyTorch CUDA semantics
+3. AMD ROCm programming guides
+4. Khronos OpenCL Guide

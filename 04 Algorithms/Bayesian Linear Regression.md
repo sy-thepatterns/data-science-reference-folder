@@ -448,3 +448,10 @@ Posterior uncertainty generally describes uncertainty under the training distrib
 - [[PyTorch - Bayesian Linear Regression]]
 - [[TensorFlow - Bayesian Linear Regression]]
 - [[Bayesian Linear Regression Implementation Comparison]]
+
+## References
+
+1. Murphy — Probabilistic Machine Learning: An Introduction
+2. Lindley and Smith — “Bayes Estimates for the Linear Model”
+3. Stan linear regression example
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

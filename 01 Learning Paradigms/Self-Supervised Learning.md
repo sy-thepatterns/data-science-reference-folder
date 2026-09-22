@@ -171,3 +171,10 @@ Frozen-probe performance measures linear accessibility, while full fine-tuning m
 - [[Unsupervised Learning]]
 - [[Supervised Learning]]
 - [[Transfer Learning]]
+
+## References
+
+1. Balestriero et al. — “A Cookbook of Self-Supervised Learning”
+2. Chen et al. — “A Simple Framework for Contrastive Learning”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

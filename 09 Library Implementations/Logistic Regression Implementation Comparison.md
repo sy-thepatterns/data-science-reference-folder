@@ -121,3 +121,13 @@ additional matrix storage. Bayesian posterior covariance, Newton Hessians, coord
 - Choose TensorFlow when Keras integration, TensorFlow deployment, or accelerator execution is central.
 
 Package choice does not change the mathematical identity of [[Logistic Regression]], but objective conventions and available inference can change the fitted result.
+
+## References
+
+1. scikit-learn — LogisticRegression
+2. scikit-learn linear-model source
+3. Pedregosa et al. — “Scikit-learn”
+4. PyTorch — torch.nn.Linear
+5. PyTorch optimizers
+6. TensorFlow — tf.keras.layers.Dense
+7. TensorFlow Keras optimizers

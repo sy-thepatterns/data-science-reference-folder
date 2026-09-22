@@ -120,3 +120,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Generative Modelling]]
 - [[Anomaly Detection]]
 - [[Regression]]
+
+## References
+
+1. Murphy — Probabilistic Machine Learning: An Introduction
+2. Scott — Multivariate Density Estimation companion materials
+3. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+4. James et al. — An Introduction to Statistical Learning

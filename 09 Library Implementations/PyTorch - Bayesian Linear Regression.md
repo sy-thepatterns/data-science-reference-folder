@@ -165,3 +165,12 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Bayesian Linear Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. PyTorch — torch.nn.Linear
+2. PyTorch optimizers
+3. Paszke et al. — “PyTorch”
+4. PyTorch DistributedDataParallel
+5. Murphy — Probabilistic Machine Learning: An Introduction
+6. Lindley and Smith — “Bayes Estimates for the Linear Model”

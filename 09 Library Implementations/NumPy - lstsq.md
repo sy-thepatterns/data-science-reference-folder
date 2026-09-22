@@ -105,3 +105,10 @@ for a dense SVD-style least-squares route.
 - directly solves the supplied matrix equation.
 
 To fit an intercept, explicitly augment or center the design.
+
+## References
+
+1. NumPy linear algebra documentation
+2. NumPy source — numpy.linalg
+3. Harris et al. — “Array Programming with NumPy”
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

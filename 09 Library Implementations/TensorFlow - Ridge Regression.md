@@ -160,3 +160,12 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Ridge Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. TensorFlow — tf.keras.layers.Dense
+2. TensorFlow Keras optimizers
+3. Abadi et al. — “TensorFlow”
+4. TensorFlow distributed training
+5. Hoerl and Kennard — ridge regression retrospective materials
+6. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

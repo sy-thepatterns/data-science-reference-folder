@@ -106,3 +106,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Neural Networks]]
 - [[Probabilistic Models]]
+
+## References
+
+1. Sutton and Barto — Reinforcement Learning: An Introduction
+2. OpenAI Spinning Up in Deep RL
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

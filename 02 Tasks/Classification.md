@@ -126,3 +126,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Regression]]
 - [[Ranking]]
 - [[Anomaly Detection]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. James et al. — An Introduction to Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Boyd and Vandenberghe — Introduction to Applied Linear Algebra

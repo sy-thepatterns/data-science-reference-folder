@@ -133,3 +133,12 @@ O\left(T\operatorname{nnz}(X)\right)
 $$
 
 The constants, memory, precision, convergence, and numerical robustness differ substantially.
+
+## References
+
+1. scikit-learn LinearRegression
+2. statsmodels OLS
+3. NumPy lstsq
+4. SciPy lstsq
+5. PyTorch Linear
+6. TensorFlow Dense

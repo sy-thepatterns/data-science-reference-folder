@@ -72,3 +72,10 @@ A map of content is like a subway map for the vault: it shows useful routes betw
 
 - [[Linear Regression Computational Pipeline]]
 - [[Linear Regression Implementation Comparison]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. James et al. — An Introduction to Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Zhang et al. — Dive into Deep Learning

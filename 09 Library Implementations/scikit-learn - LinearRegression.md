@@ -227,3 +227,10 @@ $$
 Use this implementation for prediction-oriented tabular workflows, pipelines, preprocessing integration, cross-validation, and the broader scikit-learn estimator API.
 
 For extensive coefficient inference, hypothesis tests, and regression diagnostics, compare [[statsmodels - OLS]].
+
+## References
+
+1. scikit-learn — LinearRegression
+2. scikit-learn linear-model source
+3. Pedregosa et al. — “Scikit-learn”
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

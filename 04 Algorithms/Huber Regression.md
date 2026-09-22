@@ -381,3 +381,10 @@ A threshold tuned on one residual distribution may behave poorly after variance 
 - [[PyTorch - Huber Regression]]
 - [[TensorFlow - Huber Regression]]
 - [[Huber Regression Implementation Comparison]]
+
+## References
+
+1. Huber — “Robust Estimation of a Location Parameter”
+2. statsmodels robust linear models
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

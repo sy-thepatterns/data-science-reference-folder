@@ -102,3 +102,10 @@ and aggregating the numerator and denominator costs:
 $$
 O(n)
 $$
+
+## References
+
+1. scikit-learn — R² score
+2. James et al. — An Introduction to Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

@@ -34,3 +34,10 @@ Standard low-level vector and matrix operations.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. Netlib BLAS
+2. BLAS Technical Forum Standard
+3. OpenBLAS documentation
+4. SciPy Lecture Notes

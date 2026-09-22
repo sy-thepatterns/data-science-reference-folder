@@ -192,3 +192,10 @@ Repeated entities, clusters, or temporal observations are not independent. Treat
 - [[Semi-Supervised Learning]]
 - [[Self-Supervised Learning]]
 - [[Online Learning]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. James et al. — An Introduction to Statistical Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

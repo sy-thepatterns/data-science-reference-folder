@@ -192,3 +192,10 @@ Choosing decay, alarms, or windows after examining the complete future stream us
 - [[Supervised Learning]]
 - [[Active Learning]]
 - [[Reinforcement Learning]]
+
+## References
+
+1. Shalev-Shwartz — “Online Learning and Online Convex Optimization”
+2. Hazan — Introduction to Online Convex Optimization
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

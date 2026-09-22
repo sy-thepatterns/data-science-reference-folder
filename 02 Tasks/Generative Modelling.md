@@ -121,3 +121,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 
 - [[Density Estimation]]
 - [[Representation Learning]]
+
+## References
+
+1. Murphy — Probabilistic Machine Learning: Advanced Topics
+2. Goodfellow et al. — “Generative Adversarial Nets”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

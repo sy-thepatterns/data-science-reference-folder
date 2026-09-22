@@ -106,3 +106,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Ensemble Methods]]
 - [[Nearest-Neighbour Methods]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. Breiman et al. — Classification and Regression Trees overview
+3. Chen and Guestrin — “XGBoost”
+4. Murphy — Probabilistic Machine Learning: An Introduction

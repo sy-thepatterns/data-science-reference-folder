@@ -114,3 +114,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Time-Series Modelling]]
 - [[Forecasting]]
 - [[Representation Learning]]
+
+## References
+
+1. Zhang et al. — Dive into Deep Learning
+2. Jurafsky and Martin — Speech and Language Processing
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

@@ -98,3 +98,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 
 - [[Neural Networks]]
 - [[Kernel Methods]]
+
+## References
+
+1. Hamilton — Graph Representation Learning
+2. Kipf and Welling — “Semi-Supervised Classification with Graph Convolutional Networks”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

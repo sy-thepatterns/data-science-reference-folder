@@ -189,3 +189,10 @@ If the recorded state is not Markov, $P(s_{t+1}\mid s_t,a_t)$ omits relevant his
 - [[Online Learning]]
 - [[Supervised Learning]]
 - [[Active Learning]]
+
+## References
+
+1. Sutton and Barto — Reinforcement Learning: An Introduction
+2. Levine — CS 285 Deep Reinforcement Learning
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

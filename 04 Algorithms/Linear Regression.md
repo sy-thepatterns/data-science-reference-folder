@@ -712,3 +712,20 @@ Predictions may fail when covariate support, error variance, measurement procedu
 - [[SciPy - lstsq]]
 - [[PyTorch - Linear Regression]]
 - [[TensorFlow - Linear Regression]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. White — heteroscedasticity-consistent covariance
+3. Cook — influence in linear regression
+4. scikit-learn LinearRegression
+5. statsmodels OLS
+6. LAPACK — DGEQRF
+7. LAPACK — DGESDD
+
+### Related Vault Notes
+
+- [[Linear Regression Computational Pipeline]]
+- [[Linear Regression Implementation Comparison]]
+- [[Least Squares]]
+- [[Mean Squared Error]]

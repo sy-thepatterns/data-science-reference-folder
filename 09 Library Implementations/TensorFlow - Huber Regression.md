@@ -164,3 +164,12 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. TensorFlow — tf.keras.layers.Dense
+2. TensorFlow Keras optimizers
+3. Abadi et al. — “TensorFlow”
+4. TensorFlow distributed training
+5. Huber — “Robust Estimation of a Location Parameter”
+6. statsmodels robust linear models

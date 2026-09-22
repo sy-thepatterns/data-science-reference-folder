@@ -180,3 +180,10 @@ A high-dimensional model may assign high likelihood to observations humans consi
 - [[Self-Supervised Learning]]
 - [[Semi-Supervised Learning]]
 - [[Generative Modelling]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. Murphy — Probabilistic Machine Learning: Advanced Topics
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Boyd and Vandenberghe — Introduction to Applied Linear Algebra

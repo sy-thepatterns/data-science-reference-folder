@@ -104,3 +104,10 @@ Complexity must be stated on the member note with symbols, sparsity, solver, sto
 - [[Tree-Based Methods]]
 - [[Linear Models]]
 - [[Neural Networks]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. Breiman — “Random Forests”
+3. Friedman — “Greedy Function Approximation”
+4. Murphy — Probabilistic Machine Learning: An Introduction

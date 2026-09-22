@@ -174,3 +174,10 @@ Large meta-learning searches may report the best of many unstable configurations
 - [[Transfer Learning]]
 - [[Supervised Learning]]
 - [[Online Learning]]
+
+## References
+
+1. Finn, Abbeel, and Levine — “Model-Agnostic Meta-Learning”
+2. Snell, Swersky, and Zemel — “Prototypical Networks”
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Murphy — Probabilistic Machine Learning: Advanced Topics

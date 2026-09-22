@@ -34,3 +34,10 @@ Scientific-computing algorithms including dense and sparse linear algebra.
 Implementation behaviour must be recorded against a specific release or commit.
 
 ## Official References
+
+## References
+
+1. SciPy documentation
+2. Virtanen et al. — “SciPy 1.0”
+3. SciPy source
+4. SciPy Lecture Notes

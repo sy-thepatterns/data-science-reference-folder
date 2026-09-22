@@ -55,3 +55,10 @@ CPU vector instructions, cache, and threads
 - Sparse linear algebra
 - Low-latency inference
 - Numerically robust factorization through mature libraries
+
+## References
+
+1. Intel 64 and IA-32 Architectures Software Developer Manuals
+2. OpenBLAS documentation
+3. RISC-V unprivileged ISA specification
+4. OpenMP API specification

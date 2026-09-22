@@ -96,3 +96,10 @@ QR avoids explicitly forming $X^{T}X$ and is generally more stable than the norm
 ## Rank-Revealing Variant
 
 Column-pivoted QR can help detect rank deficiency and improve robustness.
+
+## References
+
+1. Householder — “Unitary Triangularization”
+2. LAPACK — DGEQRF
+3. Demmel et al. — communication-optimal QR
+4. MIT OpenCourseWare — Numerical Methods

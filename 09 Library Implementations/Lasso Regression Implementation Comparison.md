@@ -120,3 +120,15 @@ additional matrix storage. Bayesian posterior covariance, Newton Hessians, coord
 - Choose TensorFlow when Keras integration, TensorFlow deployment, or accelerator execution is central.
 
 Package choice does not change the mathematical identity of [[Lasso Regression]], but objective conventions and available inference can change the fitted result.
+
+## References
+
+1. scikit-learn — Lasso
+2. scikit-learn linear-model source
+3. Pedregosa et al. — “Scikit-learn”
+4. Tibshirani — “Regression Shrinkage and Selection via the Lasso”
+5. Friedman, Hastie, and Tibshirani — coordinate descent
+6. PyTorch — torch.nn.Linear
+7. PyTorch optimizers
+8. TensorFlow — tf.keras.layers.Dense
+9. TensorFlow Keras optimizers

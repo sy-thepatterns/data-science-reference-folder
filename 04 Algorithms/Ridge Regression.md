@@ -441,3 +441,10 @@ Large response errors, leverage points, and changes in feature support can still
 - [[PyTorch - Ridge Regression]]
 - [[TensorFlow - Ridge Regression]]
 - [[Ridge Regression Implementation Comparison]]
+
+## References
+
+1. Hoerl and Kennard — ridge regression retrospective materials
+2. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+3. scikit-learn Ridge
+4. Murphy — Probabilistic Machine Learning: An Introduction

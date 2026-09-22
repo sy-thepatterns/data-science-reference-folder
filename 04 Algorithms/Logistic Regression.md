@@ -480,3 +480,10 @@ New categorical levels and feature combinations can make logits undefined in an 
 - [[PyTorch - Logistic Regression]]
 - [[TensorFlow - Logistic Regression]]
 - [[Logistic Regression Implementation Comparison]]
+
+## References
+
+1. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning
+2. Stanford CS229 notes — generalized linear models
+3. scikit-learn logistic regression user guide
+4. Murphy — Probabilistic Machine Learning: An Introduction

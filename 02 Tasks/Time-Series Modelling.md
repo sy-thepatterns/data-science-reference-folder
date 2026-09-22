@@ -116,3 +116,10 @@ Dataset choice must document provenance, license, sampling unit, target construc
 - [[Forecasting]]
 - [[Sequence Modelling]]
 - [[Anomaly Detection]]
+
+## References
+
+1. Hyndman and Athanasopoulos — Forecasting: Principles and Practice
+2. statsmodels time-series analysis documentation
+3. Murphy — Probabilistic Machine Learning: An Introduction
+4. Hastie, Tibshirani, and Friedman — The Elements of Statistical Learning

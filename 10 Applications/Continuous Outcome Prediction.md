@@ -51,3 +51,10 @@ Use held-out data and metrics appropriate to the consequence of errors. Mean squ
 - Omitted-variable bias
 - Data leakage
 - Confusing association with causation
+
+## References
+
+1. James et al. — An Introduction to Statistical Learning
+2. TRIPOD Statement
+3. Steyerberg — Clinical Prediction Models course materials
+4. Murphy — Probabilistic Machine Learning: An Introduction

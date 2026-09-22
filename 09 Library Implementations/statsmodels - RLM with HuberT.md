@@ -165,3 +165,11 @@ GPU availability in the table refers to this route, not merely to whether some d
 ## Best Use
 
 Use this route when its API level, solver behaviour, inference outputs, ecosystem integration, and hardware support match the project. Compare all six routes in [[Huber Regression Implementation Comparison]] before treating package choice as interchangeable.
+
+## References
+
+1. statsmodels — RLM with HuberT
+2. statsmodels linear-model source
+3. Seabold and Perktold — “Statsmodels”
+4. Huber — “Robust Estimation of a Location Parameter”
+5. statsmodels robust linear models

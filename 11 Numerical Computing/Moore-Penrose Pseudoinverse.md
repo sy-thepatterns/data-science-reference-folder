@@ -81,3 +81,10 @@ $$
 $$
 
 is a least-squares solution. When multiple solutions exist, it is the minimum-norm solution.
+
+## References
+
+1. Penrose — “A Generalized Inverse for Matrices”
+2. SciPy — pinv
+3. NumPy — pinv
+4. MIT OpenCourseWare — Numerical Methods
